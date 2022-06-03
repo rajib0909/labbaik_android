@@ -15,7 +15,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerHorizontal="true"
-            android:layout_marginTop="124dp"
+            android:layout_marginTop="100dp"
             android:text="@string/app_name"
             android:textColor="@color/theme_color"
             android:textSize="40sp"
@@ -222,28 +222,28 @@
                 android:layout_marginTop="15dp">
 
                 <ImageView
-                    android:id="@+id/imageView2"
+                    android:id="@+id/btnGoogle"
                     android:layout_width="120dp"
                     android:layout_height="40dp"
-                    android:scaleType="centerCrop"
-                    android:src="@drawable/ic_launcher_background"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/ic_google"
                     app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toStartOf="@+id/imageView3"
+                    app:layout_constraintEnd_toStartOf="@+id/btnFacebook"
                     app:layout_constraintHorizontal_bias="0.5"
                     app:layout_constraintHorizontal_chainStyle="spread_inside"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent" />
 
                 <ImageView
-                    android:id="@+id/imageView3"
+                    android:id="@+id/btnFacebook"
                     android:layout_width="120dp"
                     android:layout_height="40dp"
-                    android:scaleType="centerCrop"
-                    android:src="@drawable/ic_launcher_background"
+                    android:src="@drawable/ic_facebook"
+                    android:scaleType="fitXY"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintHorizontal_bias="0.5"
-                    app:layout_constraintStart_toEndOf="@+id/imageView2"
+                    app:layout_constraintStart_toEndOf="@+id/btnGoogle"
                     app:layout_constraintTop_toTopOf="parent" />
 
             </androidx.constraintlayout.widget.ConstraintLayout>
@@ -252,6 +252,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="30dp"
+                android:layout_marginBottom="30dp"
                 android:gravity="center"
                 android:orientation="horizontal">
 

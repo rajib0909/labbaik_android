@@ -34,4 +34,5 @@
     <string name="text_mufti">আপনি কি একজন মুহতারাম মুফতী? যে কোনো প্রশ্নের উত্তরে শরীয়াহ সম্মত সমাধান দিতে সক্ষম? ইসলামী বিধিমালা ও ফত্ওয়া সম্পর্কে সম্যক অবগত? দ্বীন ও জাতির খেদমতে আপনি নিয়োজিত হতে ইচ্ছুক?\n\nতাহলে এখনি Continue বাটনে ক্লিক করে একাউন্ট করে নিন।\n\nজাঝাকাল্লাহু খায়রান।</string>
     <string name="welcome_back">Welcome Back</string>
     <string name="or_continue_with">Or continue with</string>
+    <string name="confirm_password">Confirm Password</string>
 </resources>

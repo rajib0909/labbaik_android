@@ -35,4 +35,18 @@
     <string name="welcome_back">Welcome Back</string>
     <string name="or_continue_with">Or continue with</string>
     <string name="confirm_password">Confirm Password</string>
+    <string name="welcome_text_user">অভিনন্দন!\n\nলাব্বাইক পরিবারে আপনাকে স্বাগতম। ধর্ম বিষয়ক আপনার যত প্রশ্ন, তার সঠিক উত্তর প্রদানেই আমাদের এই আয়োজন।\n\nজাঝাকাল্লাহু খায়রান।</string>
+    <string name="welcome_text_mufti">অভিনন্দন!\nলাব্বাইক পরিবারে আপনাকে স্বাগতম। ধর্ম বিষয়ক আপনার মূল্যবান জ্ঞানভাণ্ডার কর্তৃক মুসলিম উম্মাহকে উপকৃত করতেই আমাদের এই সামান্য প্রয়াস।\n\nফরম বিস্তারিত পূরণ না করে থাকলে অতিসত্ত্বর পূরণ করুন। আমাদের রিভিউ ইউনিট আপনার সাথে অতিসত্ত্বর যোগাযোগ করবে। ইনশাআল্লাহ\n\nজাঝাকাল্লাহু খায়রান।</string>
+    <string name="back_to_home">Back to home</string>
+    <string name="next">Next</string>
+    <string name="father_s_name_optional">Father\'s name (Optional)</string>
+    <string name="gender_optional">Gender (Optional)</string>
+    <string name="permanent_address">Permanent Address</string>
+    <string name="active_contact_number">Active contact number</string>
+    <string name="date_of_birth">Date of Birth</string>
+    <string name="marital_status">Marital status</string>
+    <string name="skip">Skip</string>
+    <string name="meshkat">Meshkat</string>
+    <string name="result">Result</string>
+    <string name="year">year</string>
 </resources>

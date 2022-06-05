@@ -25,12 +25,14 @@
         <entry key="..\:/Android Project/Labbaiik/app/src/main/res/layout/fragment_profile.xml" value="0.3625" />
         <entry key="..\:/Android Project/Labbaiik/app/src/main/res/layout/fragment_questions.xml" value="0.33" />
         <entry key="..\:/Android Project/Labbaiik/app/src/main/res/menu/bottom_nav_menu.xml" value="0.3625" />
+        <entry key="..\:/Android Project/labbaik_android/app/src/main/res/drawable-night/ic_double_quotation_mark.xml" value="0.276" />
+        <entry key="..\:/Android Project/labbaik_android/app/src/main/res/drawable/ic_double_quotation_mark.xml" value="0.276" />
+        <entry key="..\:/Android Project/labbaik_android/app/src/main/res/drawable/ic_double_quotation_mark_dark.xml" value="0.276" />
         <entry key="..\:/Android Project/labbaik_android/app/src/main/res/layout/activity_login.xml" value="0.25" />
-        <entry key="..\:/Android project/labbaik_android/app/src/main/res/drawable/ic_facebook.xml" value="0.244" />
-        <entry key="..\:/Android project/labbaik_android/app/src/main/res/layout/activity_login.xml" value="0.33" />
-        <entry key="..\:/Android project/labbaik_android/app/src/main/res/layout/activity_sign_up.xml" value="0.3625" />
-        <entry key="..\:/Android project/labbaik_android/app/src/main/res/layout/activity_sign_up_mufti.xml" value="0.3625" />
-        <entry key="..\:/Android project/labbaik_android/app/src/main/res/layout/activity_sign_up_user.xml" value="0.33" />
+        <entry key="..\:/Android Project/labbaik_android/app/src/main/res/layout/activity_sign_up.xml" value="0.26403641881638845" />
+        <entry key="..\:/Android Project/labbaik_android/app/src/main/res/layout/activity_sign_up_mufti.xml" value="0.25" />
+        <entry key="..\:/Android Project/labbaik_android/app/src/main/res/layout/activity_sign_up_user.xml" value="0.26403641881638845" />
+        <entry key="..\:/Android Project/labbaik_android/app/src/main/res/layout/activity_welcome.xml" value="0.22" />
       </map>
     </option>
   </component>

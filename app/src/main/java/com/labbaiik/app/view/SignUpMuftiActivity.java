@@ -25,6 +25,7 @@ public class SignUpMuftiActivity extends AppCompatActivity {
 
     ActivitySignUpMuftiBinding signUpMuftiBinding;
     private File file;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -45,8 +46,10 @@ public class SignUpMuftiActivity extends AppCompatActivity {
                 }
         );
 
-        signUpMuftiBinding.btnSignUp.setOnClickListener(l -> {
-                    startActivity(new Intent(SignUpMuftiActivity.this, OtpVerificationActivity.class));
+        signUpMuftiBinding.btnNext1.setOnClickListener(l -> {
+                    Intent intent = new Intent(SignUpMuftiActivity.this, WelcomeActivity.class);
+                    intent.putExtra("UserType", "mufti");
+                    startActivity(intent);
                 }
         );
 

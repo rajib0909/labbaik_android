@@ -60,7 +60,7 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textView"
             app:layout_constraintVertical_chainStyle="spread"
-            app:layout_constraintWidth_percent=".7">
+            app:layout_constraintWidth_percent=".75">
 
             <com.google.android.material.textfield.TextInputLayout
                 android:id="@+id/label_email"
@@ -168,7 +168,7 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/linearLayout4"
-            app:layout_constraintWidth_percent=".7">
+            app:layout_constraintWidth_percent=".75">
 
 
             <androidx.constraintlayout.widget.ConstraintLayout

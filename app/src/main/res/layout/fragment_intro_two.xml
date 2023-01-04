@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:app="http://schemas.android.com/apk/res-auto"
+xmlns:tools="http://schemas.android.com/tools"
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+android:background="@color/intro_bg"
+android:gravity="center"
+android:orientation="vertical"
+android:padding="20dp"
+tools:context=".view.activity.introFragment.IntroTwoFragment">
+
+
+<com.airbnb.lottie.LottieAnimationView
+    android:id="@+id/login_drawable"
+    android:layout_width="250dp"
+    android:layout_height="250dp"
+    app:lottie_autoPlay="true"
+    app:lottie_loop="true"
+    app:lottie_rawRes="@raw/time" />
+
+<TextView
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center"
+    android:text="@string/prayer_time_schedule"
+    android:textColor="#00A99D"
+    android:textSize="20sp"
+    android:textStyle="bold" />
+
+
+<TextView
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="12dp"
+    android:gravity="center"
+    android:text="@string/demo_text"
+    android:textColor="#0E1723"
+    android:textSize="14sp" />
+
+</LinearLayout>

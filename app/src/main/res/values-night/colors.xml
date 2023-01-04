@@ -6,6 +6,7 @@
     <color name="teal_200">#FF03DAC5</color>
     <color name="teal_700">#FF018786</color>
     <color name="black">#FF000000</color>
+    <color name="input_text_color">#FFFFFFFF</color>
     <color name="white">#FFFFFFFF</color>
     <color name="splash_status_bar_color">#121212</color>
     <color name="textColor_1">#FFFFFF</color>
@@ -13,9 +14,35 @@
     <color name="textColor_3">#FFFFFF</color>
     <color name="textColor_4">#FFFFFF</color>
     <color name="textColor_5">#FFFFFF</color>
-    <color name="text_hint_color">#868A90</color>
+    <color name="text_hint_color">#959BA1</color>
     <color name="end_icon_color">#666666</color>
     <color name="textColor_black">#FFFFFF</color>
     <color name="toolbar_color">#121212</color>
     <color name="mtrl_textinput_default_box_stroke_color">#00A99D</color>
+    <color name="background_color">#0E1723</color>
+    <color name="textColor_new_1">#F2F7F9</color>
+    <color name="textColor_primary">#F2F7F9</color>
+    <color name="textColor_primary_red">#F2F7F9</color>
+    <color name="primary_button_color">#53657B</color>
+    <color name="line_color">#80878E</color>
+    <color name="color_input_text_background">#383F48</color>
+    <color name="color_input_text_icon">#FFFFFF</color>
+    <color name="color_signup_selection_bg">#455569</color>
+    <color name="color_signup_selection_serial_bg">#C4CACE</color>
+    <color name="color_signup_selection_serial_text_bg">#F2F7F9</color>
+    <color name="color_signup_selection_text_bg">#535F6E</color>
+    <color name="color_signup_selection_text_bg_active">#C4CACE</color>
+    <color name="color_red">#F2F7F9</color>
+    <color name="selection_account_bg">#383F48</color>
+    <color name="selection_account_bg_line">#C2D1D1</color>
+    <color name="selection_account_text_color">#DFEFED</color>
+    <color name="selection_account_button_text_color">#FFFFFF</color>
+    <color name="selection_account_card_bg">#53657B</color>
+    <color name="selection_account_button_bg">#53657B</color>
+    <color name="intro_bg">#F2F7F9</color>
+    <color name="profile_line_color">#979DA3</color>
+    <color name="profile_card_background_color_1">#383F48</color>
+    <color name="profile_card_background_color_2">#30B8AF</color>
+    <color name="profile_card_background_color_3">#53657B</color>
+
 </resources>

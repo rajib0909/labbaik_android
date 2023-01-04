@@ -1,19 +1,26 @@
 <resources>
     <string name="app_name">Labbaiik</string>
+    <string name="e_fatwa">E-FATWA</string>
+
+    //Login
+    <string name="login_text"><b>Welcome.</b> Login to your E-FATWA account with your mobile or email address.</string>
+    <string name="register_now"><u><b>Register now!</b></u></string>
+    <string name="sign_in_back"><u><b>Sign in</b></u></string>
+
     <string name="email">Email</string>
     <string name="password">Password</string>
-    <string name="forgot_password">Forgot Password</string>
+    <string name="forgot_password"><u>Forgot Password?</u></string>
     <string name="sign_in">Sign in</string>
     <string name="don_t_have_an_account">Don\'t have an account?</string>
     <string name="sign_up">Sign up</string>
     <string name="login">Login</string>
-    <string name="email_mobile_no">Email / Mobile no</string>
+    <string name="email_mobile_no">Mobile no or email</string>
     <string name="who_are_you">Who you are</string>
     <string name="user">User</string>
     <string name="todo">TODO</string>
     <string name="mufti">Mufti</string>
     <string name="please_sign_up_to_your_account">Please sign up to your account</string>
-    <string name="name">Name</string>
+    <string name="name">Full Name</string>
     <string name="gender">Gender</string>
     <string name="already_have_an_account">Already have an account?</string>
     <string name="add_photo">Add photo</string>
@@ -35,8 +42,8 @@
     <string name="welcome_back">Welcome Back</string>
     <string name="or_continue_with">Or continue with</string>
     <string name="confirm_password">Confirm Password</string>
-    <string name="welcome_text_user">অভিনন্দন!\n\nলাব্বাইক পরিবারে আপনাকে স্বাগতম। ধর্ম বিষয়ক আপনার যত প্রশ্ন, তার সঠিক উত্তর প্রদানেই আমাদের এই আয়োজন।\n\nজাঝাকাল্লাহু খায়রান।</string>
-    <string name="welcome_text_mufti">অভিনন্দন!\nলাব্বাইক পরিবারে আপনাকে স্বাগতম। ধর্ম বিষয়ক আপনার মূল্যবান জ্ঞানভাণ্ডার কর্তৃক মুসলিম উম্মাহকে উপকৃত করতেই আমাদের এই সামান্য প্রয়াস।\n\nফরম বিস্তারিত পূরণ না করে থাকলে অতিসত্ত্বর পূরণ করুন। আমাদের রিভিউ ইউনিট আপনার সাথে অতিসত্ত্বর যোগাযোগ করবে। ইনশাআল্লাহ\n\nজাঝাকাল্লাহু খায়রান।</string>
+    <string name="welcome_text_user">Welcome to the Labbaik family. This is our organization to provide correct answers to all your questions about religion.</string>
+    <string name="welcome_text_mufti">Your profile has been submitted &amp; will be reviewed by <font fgcolor='#00A99D'><u><b>Labbaiik</b></u> </font> team. You will be notified if any extra information is needed.</string>
     <string name="back_to_home">Back to home</string>
     <string name="next">Next</string>
     <string name="father_s_name_optional">Father\'s name (Optional)</string>
@@ -49,4 +56,46 @@
     <string name="meshkat">Meshkat</string>
     <string name="result">Result</string>
     <string name="year">year</string>
+    <string name="create_an_account">Create an account !</string>
+    <string name="signup_text">Enter your personal details and start your journey with <font fgcolor='#00A99D'><u><b>Labbaiik.com</b></u> </font></string>
+    <string name="i_agree_with_the_terms_conditions">I agree with the <font fgcolor='#00A99D'><u><b>terms &amp; conditions</b></u> </font></string>
+    <string name="upload_your_photo">Upload your photo</string>
+    <string name="save">Save</string>
+    <string name="congratulations">Congratulations!</string>
+    <string name="powered_by_labbaiik_com">Powered by <font fgcolor='#00A99D'><u><b>Labbaiik.com</b></u> </font></string>
+    <string name="are_you_mufti">Are you Mufti?</string>
+    <string name="create">Create</string>
+    <string name="details">Details</string>
+    <string name="qualifications">Qualifications</string>
+    <string name="institution_name">Institution name</string>
+    <string name="introduce_your_self">Introduce your self</string>
+    <string name="workplace_name">Workplace name</string>
+    <string name="district">District</string>
+    <string name="talimi_murabbi_name">Talimi Murabbi name</string>
+    <string name="phone">Phone</string>
+    <string name="experience_in_issuing_written_fatwas">Experience in issuing written fatwas</string>
+    <string name="interested_category_for_answering">Interested category for answering</string>
+    <string name="submit_to_review">Submit to review</string>
+    <string name="choose_account_type">Choose account type:</string>
+    <string name="for_user">For user</string>
+    <string name="user_details">Do you want to know the solution of various religious questions?</string>
+    <string name="mufti_details">Ready to give solutions according to Shariah of any question?</string>
+    <string name="for_mufti">For Mufti</string>
+    <string name="get_started">Get Started</string>
+    <string name="ask_your_questions_anytime">Ask your questions anytime</string>
+    <string name="demo_text">Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley.</string>
+    <string name="prayer_time_schedule">Prayer time schedule</string>
+    <string name="also_many_other_features">Also many other features</string>
+    <string name="edit_profile">Edit profile</string>
+    <string name="public_question">Public question</string>
+    <string name="private_question">Private question</string>
+    <string name="total_question"><u>Total Question</u></string>
+    <string name="answered"><u>Answered</u></string>
+    <string name="pending"><u>Pending</u></string>
+    <string name="all_question">All Question</string>
+    <string name="saved_questions">Saved Questions</string>
+    <string name="correction_req">Correction req.</string>
+    <string name="sign_out">Sign out</string>
+    <string name="ask_question">Ask question</string>
 </resources>
+

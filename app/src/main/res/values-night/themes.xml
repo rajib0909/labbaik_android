@@ -15,21 +15,7 @@
         <!-- Customize your theme here. -->
     </style>
 
-   <!-- <style name="Theme.Labbaiik.whiteStatusBar" parent="Theme.MaterialComponents.DayNight.NoActionBar">
-        &lt;!&ndash; Primary brand color. &ndash;&gt;
-        <item name="colorPrimary">@color/theme_color</item>
-        <item name="colorPrimaryVariant">@color/theme_color</item>
-        <item name="colorOnPrimary">@color/black</item>
-        &lt;!&ndash; Secondary brand color. &ndash;&gt;
-        <item name="colorSecondary">@color/theme_color</item>
-        <item name="colorSecondaryVariant">@color/theme_color</item>
-        <item name="colorOnSecondary">@color/black</item>
-        &lt;!&ndash; Status bar color. &ndash;&gt;
-        <item name="android:windowLightStatusBar">false</item>
-        <item name="android:statusBarColor">@color/splash_status_bar_color</item>
-        &lt;!&ndash; Customize your theme here. &ndash;&gt;
-        <item name="android:fontFamily">@font/poppins</item>
-    </style> -->
+
 
     <style name="Theme.Labbaiik.whiteStatusBar" parent="Theme.MaterialComponents.DayNight.NoActionBar">
         <!-- Primary brand color. -->
@@ -42,9 +28,28 @@
         <item name="colorOnSecondary">@color/black</item>
         <!-- Status bar color. -->
         <item name="android:windowLightStatusBar">false</item>
-        <item name="android:statusBarColor" tools:targetApi="l">@android:color/transparent</item>
-        <item name="android:windowNoTitle">true</item>
-        <item name="android:windowTranslucentStatus">true</item>
+        <item name="android:statusBarColor" tools:targetApi="l">@color/background_color</item>
+<!--        <item name="android:windowNoTitle">true</item>-->
+<!--        <item name="android:windowTranslucentStatus">true</item>-->
+        <!-- Customize your theme here. -->
+        <item name="android:fontFamily">@font/poppins</item>
+    </style>
+
+    <style name="Theme.Labbaiik.intro" parent="Theme.MaterialComponents.Light.NoActionBar">
+        <!-- Primary brand color. -->
+        <item name="colorPrimary">@color/theme_color</item>
+        <item name="colorPrimaryVariant">@color/theme_color</item>
+        <item name="colorOnPrimary">@color/white</item>
+        <!-- Secondary brand color. -->
+        <item name="colorSecondary">@color/theme_color</item>
+        <item name="colorSecondaryVariant">@color/theme_color</item>
+        <item name="colorOnSecondary">@color/black</item>
+        <!-- Status bar color. -->
+        <item name="android:windowLightStatusBar">true</item>
+        <item name="android:statusBarColor" tools:targetApi="l">@color/intro_bg</item>
+        <!--        <item name="android:windowNoTitle">true</item>-->
+        <!--        <item name="android:windowTranslucentStatus">true</item>-->
+
         <!-- Customize your theme here. -->
         <item name="android:fontFamily">@font/poppins</item>
     </style>

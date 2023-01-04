@@ -27,6 +27,32 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Labbaiik">
         <activity
+            android:name=".view.activity.IntroActivity"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.Labbaiik.intro" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".view.activity.MuftiImageSetActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.Labbaiik.whiteStatusBar" />
+        <activity
+            android:name=".view.activity.MuftiWelcomeActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.Labbaiik.whiteStatusBar" />
+        <activity
+            android:name=".view.UserImageSetActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.Labbaiik.whiteStatusBar" />
+        <activity
             android:name=".view.WelcomeActivity"
             android:exported="false"
             android:screenOrientation="portrait"
@@ -51,26 +77,21 @@
             android:screenOrientation="portrait"
             android:theme="@style/Theme.Labbaiik.whiteStatusBar" />
         <activity
-            android:name=".view.SignUpActivity"
-            android:exported="false"
-            android:screenOrientation="portrait"
-            android:theme="@style/Theme.Labbaiik.whiteStatusBar" />
-        <activity
             android:name=".view.LoginActivity"
-            android:exported="false"
+            android:exported="true"
             android:screenOrientation="portrait"
-            android:theme="@style/Theme.Labbaiik.whiteStatusBar" />
+            android:theme="@style/Theme.Labbaiik.whiteStatusBar">
+<!--            <intent-filter>-->
+<!--                <action android:name="android.intent.action.MAIN" />-->
+
+<!--                <category android:name="android.intent.category.LAUNCHER" />-->
+<!--            </intent-filter>-->
+        </activity>
         <activity
             android:name=".view.SplashActivity"
             android:exported="true"
             android:screenOrientation="portrait"
-            android:theme="@style/Theme.Labbaiik.whiteStatusBar">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
+            android:theme="@style/Theme.Labbaiik.whiteStatusBar" />
     </application>
 
 </manifest>

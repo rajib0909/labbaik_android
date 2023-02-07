@@ -7,6 +7,7 @@
     <color name="teal_700">#FF018786</color>
     <color name="black">#FF000000</color>
     <color name="input_text_color">#FF000000</color>
+    <color name="input_text_color_profile">#0E1723</color>
     <color name="white">#FFFFFFFF</color>
     <color name="splash_status_bar_color">#FFFFFFFF</color>
     <color name="textColor_1">#99000000</color>
@@ -24,9 +25,11 @@
     <color name="textColor_new_1">#686F78</color>
     <color name="textColor_primary">#0E1723</color>
     <color name="textColor_primary_red">#F55D5D</color>
+    <color name="textColor_mufti_name">#00A99D</color>
     <color name="primary_button_color">#00A99D</color>
     <color name="line_color">#7F868D</color>
     <color name="color_input_text_background">#FFFFFF</color>
+    <color name="color_input_text_background_profile">#F2F7F9</color>
     <color name="color_input_text_icon">#00A99D</color>
     <color name="color_signup_selection_bg">#8290A0</color>
     <color name="color_signup_selection_serial_bg">#F2F7F9</color>
@@ -34,6 +37,7 @@
     <color name="color_signup_selection_text_bg">#8290A0</color>
     <color name="color_signup_selection_text_bg_active">#8290A0</color>
     <color name="color_red">#F55D5D</color>
+    <color name="color_red_day_night">#F55D5D</color>
     <color name="selection_account_bg">#00A99D</color>
     <color name="selection_account_bg_line">#B9E2DF</color>
     <color name="selection_account_text_color">#DFEFED</color>

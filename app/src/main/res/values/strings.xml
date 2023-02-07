@@ -5,6 +5,7 @@
     //Login
     <string name="login_text"><b>Welcome.</b> Login to your E-FATWA account with your mobile or email address.</string>
     <string name="register_now"><u><b>Register now!</b></u></string>
+    <string name="category_name"><u>Category name</u></string>
     <string name="sign_in_back"><u><b>Sign in</b></u></string>
 
     <string name="email">Email</string>
@@ -97,5 +98,9 @@
     <string name="correction_req">Correction req.</string>
     <string name="sign_out">Sign out</string>
     <string name="ask_question">Ask question</string>
+    <string name="what_correction_to_do">What correction to do?</string>
+    <string name="your_question">Your Question:</string>
+    <string name="update">Update</string>
+    <string name="back">Back</string>
 </resources>
 

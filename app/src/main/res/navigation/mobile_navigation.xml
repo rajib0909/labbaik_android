@@ -19,9 +19,21 @@
 
     <fragment
         android:id="@+id/navigation_profile"
-        android:name="com.labbaiik.app.view.fragments.ProfileFragment"
+        android:name="com.labbaiik.app.view.fragments.userProfile.ProfileFragment"
         android:label=""
         tools:layout="@layout/fragment_profile" />
+
+    <fragment
+        android:id="@+id/navigation_correction_request"
+        android:name="com.labbaiik.app.view.fragments.userProfile.CorrectionRequestFragment"
+        android:label=""
+        tools:layout="@layout/fragment_correction_request" />
+
+    <fragment
+        android:id="@+id/navigation_answer_fragment"
+        android:name="com.labbaiik.app.view.fragments.userProfile.AnswerFragment"
+        android:label=""
+        tools:layout="@layout/fragment_answer" />
 
 
 </navigation>

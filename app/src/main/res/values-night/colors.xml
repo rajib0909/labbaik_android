@@ -45,6 +45,7 @@
     <color name="selection_account_button_bg">#53657B</color>
     <color name="intro_bg">#F2F7F9</color>
     <color name="profile_line_color">#979DA3</color>
+    <color name="profile_line_color_2">#383F48</color>
     <color name="profile_card_background_color_1">#383F48</color>
     <color name="profile_card_background_color_2">#30B8AF</color>
     <color name="profile_card_background_color_3">#53657B</color>

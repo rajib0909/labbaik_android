@@ -35,5 +35,17 @@
         android:label=""
         tools:layout="@layout/fragment_answer" />
 
+    <fragment
+        android:id="@+id/navigation_pending_question"
+        android:name="com.labbaiik.app.view.fragments.userProfile.PendingQuestionFragment"
+        android:label=""
+        tools:layout="@layout/fragment_pending_question" />
+
+    <fragment
+        android:id="@+id/navigation_all_question"
+        android:name="com.labbaiik.app.view.fragments.userProfile.AllQuestionFragment"
+        android:label=""
+        tools:layout="@layout/fragment_all_question" />
+
 
 </navigation>

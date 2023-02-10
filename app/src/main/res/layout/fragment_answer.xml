@@ -5,6 +5,7 @@
         xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:background="@color/background_color"
         tools:context=".view.fragments.userProfile.AnswerFragment">
 
         <androidx.appcompat.widget.Toolbar
@@ -26,7 +27,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:text="@string/answered"
+                android:text="@string/answered_tv"
                 android:textColor="@color/white"
                 android:textSize="16sp"
                 android:textStyle="bold" />
@@ -127,6 +128,54 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="38dp"
+                    android:layout_marginTop="4dp"
+                    android:layout_marginBottom="4dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="8dp"
+                        android:background="@drawable/profile_edit_text_background_theme"
+                        android:paddingStart="8dp"
+                        android:paddingTop="2dp"
+                        android:paddingEnd="8dp"
+                        android:paddingBottom="4dp"
+                        android:text="জানাযার নামায"
+                        android:textColor="@color/white"
+                        android:textSize="8sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="8dp"
+                        android:background="@drawable/profile_edit_text_background_theme"
+                        android:paddingStart="8dp"
+                        android:paddingTop="2dp"
+                        android:paddingEnd="8dp"
+                        android:paddingBottom="4dp"
+                        android:text="জানাযার নামায"
+                        android:textColor="@color/white"
+                        android:textSize="8sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="8dp"
+                        android:background="@drawable/profile_edit_text_background_theme"
+                        android:paddingStart="8dp"
+                        android:paddingTop="2dp"
+                        android:paddingEnd="8dp"
+                        android:paddingBottom="4dp"
+                        android:text="জানাযার নামায"
+                        android:textColor="@color/white"
+                        android:textSize="8sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="38dp"
                     android:layout_marginTop="6dp"
                     android:orientation="horizontal">
 
@@ -201,62 +250,91 @@
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:orientation="horizontal">
+                    android:orientation="horizontal"
+                    android:padding="3dp">
 
-                    <TextView
+                    <LinearLayout
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
-                        android:drawablePadding="4dp"
-                        android:text="(10K)"
-                        android:textColor="@color/textColor_mufti_name"
-                        android:textSize="10sp"
-                        app:drawableStartCompat="@drawable/ok" />
+                        android:gravity="center">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:drawablePadding="4dp"
+                            android:text="(10K)"
+                            android:textColor="@color/textColor_mufti_name"
+                            android:textSize="10sp"
+                            app:drawableStartCompat="@drawable/ok" />
+                    </LinearLayout>
 
                     <View
                         android:layout_width="1.5dp"
                         android:layout_height="match_parent"
                         android:background="@color/line_color" />
 
-                    <TextView
+                    <LinearLayout
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
-                        android:drawablePadding="4dp"
-                        android:text="Share (29)"
-                        android:textColor="@color/textColor_primary"
-                        android:textSize="10sp"
-                        app:drawableStartCompat="@drawable/share" />
+                        android:gravity="center">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:drawablePadding="4dp"
+                            android:text="Share (29)"
+                            android:textColor="@color/textColor_primary"
+                            android:textSize="10sp"
+                            app:drawableStartCompat="@drawable/share" />
+
+                    </LinearLayout>
 
                     <View
                         android:layout_width="1.5dp"
                         android:layout_height="match_parent"
                         android:background="@color/line_color" />
 
-                    <TextView
+                    <LinearLayout
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
-                        android:drawablePadding="4dp"
-                        android:text="Comment (98)"
-                        android:textColor="@color/textColor_primary"
-                        android:textSize="10sp"
-                        app:drawableStartCompat="@drawable/comment_new" />
+                        android:gravity="center">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:drawablePadding="4dp"
+                            android:text="Comment (98)"
+                            android:textColor="@color/textColor_primary"
+                            android:textSize="10sp"
+                            app:drawableStartCompat="@drawable/comment_new" />
+
+                    </LinearLayout>
 
                     <View
                         android:layout_width="1.5dp"
                         android:layout_height="match_parent"
                         android:background="@color/line_color" />
 
-                    <TextView
+                    <LinearLayout
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
-                        android:drawablePadding="4dp"
-                        android:text="(109K)"
-                        android:textColor="@color/textColor_mufti_name"
-                        android:textSize="10sp"
-                        app:drawableStartCompat="@drawable/eye_color" />
+                        android:gravity="center">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:drawablePadding="4dp"
+                            android:text="(109K)"
+                            android:textColor="@color/textColor_mufti_name"
+                            android:textSize="10sp"
+                            app:drawableStartCompat="@drawable/eye_color" />
+
+                    </LinearLayout>
+
                 </LinearLayout>
 
 

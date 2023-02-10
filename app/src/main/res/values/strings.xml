@@ -93,7 +93,7 @@
     <string name="total_question"><u>Total Question</u></string>
     <string name="answered"><u>Answered</u></string>
     <string name="pending"><u>Pending</u></string>
-    <string name="all_question">All Question</string>
+    <string name="all_question">All Questions</string>
     <string name="saved_questions">Saved Questions</string>
     <string name="correction_req">Correction req.</string>
     <string name="sign_out">Sign out</string>
@@ -102,5 +102,10 @@
     <string name="your_question">Your Question:</string>
     <string name="update">Update</string>
     <string name="back">Back</string>
+    <string name="answered_tv">Answered</string>
+    <string name="pending_questions">Pending Questions</string>
+    <string name="personal_info">Personal Info.</string>
+    <string name="edit">Edit</string>
+    <string name="last_update_your_password_2_months_ago">Last update your password 2 months ago.</string>
 </resources>
 

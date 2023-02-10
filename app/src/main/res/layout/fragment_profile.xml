@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <layout>
+
     <androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:app="http://schemas.android.com/apk/res-auto"
         xmlns:tools="http://schemas.android.com/tools"
@@ -17,13 +18,15 @@
                 android:layout_height="match_parent"
                 android:background="@color/background_color"
                 android:orientation="vertical"
-                android:padding="20dp">
-
+                android:paddingTop="20dp"
+                android:paddingBottom="20dp">
 
                 <androidx.constraintlayout.widget.ConstraintLayout
                     android:id="@+id/profile_image_layout"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content">
+                    android:layout_height="wrap_content"
+                    android:paddingStart="20dp"
+                    android:paddingEnd="20dp">
 
                     <ImageView
                         android:id="@+id/imageView2"
@@ -88,459 +91,672 @@
                 </androidx.constraintlayout.widget.ConstraintLayout>
 
                 <LinearLayout
+                    android:id="@+id/questions_layout"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="12sp"
-                    android:orientation="horizontal">
+                    android:layout_marginStart="20dp"
+                    android:layout_marginEnd="20dp"
+                    android:orientation="vertical"
+                    android:visibility="visible">
 
-                    <ImageView
-                        android:layout_width="15dp"
-                        android:layout_height="15dp"
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="12sp"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:layout_width="15dp"
+                            android:layout_height="15dp"
+                            android:layout_marginTop="4dp"
+                            android:scaleType="centerCrop"
+                            android:src="@drawable/global" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginStart="8dp"
+                            android:text="@string/public_question"
+                            android:textColor="@color/textColor_primary"
+                            android:textSize="16sp"
+                            android:textStyle="bold" />
+
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="3dp"
                         android:layout_marginTop="4dp"
-                        android:scaleType="centerCrop"
-                        android:src="@drawable/global" />
+                        android:background="@color/profile_line_color" />
 
-                    <TextView
-                        android:layout_width="wrap_content"
+                    <LinearLayout
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_gravity="center_vertical"
-                        android:layout_marginStart="8dp"
-                        android:text="@string/public_question"
-                        android:textColor="@color/textColor_primary"
-                        android:textSize="16sp"
-                        android:textStyle="bold" />
+                        android:layout_marginStart="8sp"
+                        android:layout_marginTop="8sp"
+                        android:layout_marginEnd="8sp"
+                        android:orientation="horizontal">
 
-                </LinearLayout>
+                        <com.google.android.material.card.MaterialCardView
+                            android:id="@+id/btn_all_public_question"
+                            android:layout_width="0dp"
+                            android:layout_height="80dp"
+                            android:layout_margin="4dp"
+                            android:layout_weight="1"
+                            android:backgroundTint="@color/profile_card_background_color_1"
+                            android:clickable="true"
+                            android:elevation="4dp"
+                            android:focusable="true"
+                            app:cardCornerRadius="12dp">
 
-                <View
-                    android:layout_width="match_parent"
-                    android:layout_height="3dp"
-                    android:layout_marginTop="4dp"
-                    android:background="@color/profile_line_color" />
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent">
 
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="8sp"
-                    android:layout_marginTop="8sp"
-                    android:layout_marginEnd="8sp"
-                    android:orientation="horizontal">
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_centerHorizontal="true"
+                                    android:layout_margin="10dp"
+                                    android:text="@string/total_question"
+                                    android:textColor="@color/textColor_primary"
+                                    android:textSize="10dp"
+                                    android:textStyle="bold" />
 
-                    <com.google.android.material.card.MaterialCardView
-                        android:layout_width="0dp"
-                        android:layout_height="80dp"
-                        android:layout_margin="4dp"
-                        android:layout_weight="1"
-                        android:backgroundTint="@color/profile_card_background_color_1"
-                        android:clickable="true"
-                        android:elevation="4dp"
-                        android:focusable="true"
-                        app:cardCornerRadius="12dp">
+                                <TextView
+                                    android:id="@+id/public_total_question"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignParentBottom="true"
+                                    android:layout_centerHorizontal="true"
+                                    android:layout_marginBottom="25dp"
+                                    android:text="1000"
+                                    android:textColor="@color/textColor_primary"
+                                    android:textSize="18sp"
+                                    android:textStyle="bold" />
+                            </RelativeLayout>
 
-                        <RelativeLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent">
+                        </com.google.android.material.card.MaterialCardView>
 
-                            <TextView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_centerHorizontal="true"
-                                android:layout_margin="10dp"
-                                android:text="@string/total_question"
-                                android:textColor="@color/textColor_primary"
-                                android:textSize="10dp"
-                                android:textStyle="bold" />
+                        <com.google.android.material.card.MaterialCardView
+                            android:id="@+id/btn_public_question_answer"
+                            android:layout_width="0dp"
+                            android:layout_height="80dp"
+                            android:layout_margin="4dp"
+                            android:layout_weight="1"
+                            android:backgroundTint="@color/profile_card_background_color_2"
+                            android:clickable="true"
+                            android:elevation="4dp"
+                            android:focusable="true"
+                            app:cardCornerRadius="12dp">
 
-                            <TextView
-                                android:id="@+id/public_total_question"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_alignParentBottom="true"
-                                android:layout_centerHorizontal="true"
-                                android:layout_marginBottom="25dp"
-                                android:text="1000"
-                                android:textColor="@color/textColor_primary"
-                                android:textSize="18sp"
-                                android:textStyle="bold" />
-                        </RelativeLayout>
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent">
 
-                    </com.google.android.material.card.MaterialCardView>
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_centerHorizontal="true"
+                                    android:layout_marginStart="10dp"
+                                    android:layout_marginTop="10dp"
+                                    android:layout_marginEnd="10dp"
+                                    android:layout_marginBottom="10dp"
+                                    android:text="@string/answered"
+                                    android:textColor="@color/white"
+                                    android:textSize="10dp"
+                                    android:textStyle="bold" />
 
-                    <com.google.android.material.card.MaterialCardView
-                        android:id="@+id/btn_public_question_answer"
-                        android:layout_width="0dp"
-                        android:layout_height="80dp"
-                        android:layout_margin="4dp"
-                        android:layout_weight="1"
-                        android:backgroundTint="@color/profile_card_background_color_2"
-                        android:clickable="true"
-                        android:elevation="4dp"
-                        android:focusable="true"
-                        app:cardCornerRadius="12dp">
+                                <TextView
+                                    android:id="@+id/public_total_answered"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignParentBottom="true"
+                                    android:layout_centerHorizontal="true"
+                                    android:layout_marginBottom="25dp"
+                                    android:text="998"
+                                    android:textColor="@color/white"
+                                    android:textSize="18sp"
+                                    android:textStyle="bold" />
 
-                        <RelativeLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent">
+                                <ImageView
+                                    android:layout_width="15dp"
+                                    android:layout_height="15dp"
+                                    android:layout_alignParentEnd="true"
+                                    android:layout_alignParentBottom="true"
+                                    android:layout_margin="4dp"
+                                    android:scaleType="centerCrop"
+                                    android:src="@drawable/polygon" />
 
-                            <TextView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_centerHorizontal="true"
-                                android:layout_marginStart="10dp"
-                                android:layout_marginTop="10dp"
-                                android:layout_marginEnd="10dp"
-                                android:layout_marginBottom="10dp"
-                                android:text="@string/answered"
-                                android:textColor="@color/white"
-                                android:textSize="10dp"
-                                android:textStyle="bold" />
+                            </RelativeLayout>
 
-                            <TextView
-                                android:id="@+id/public_total_answered"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_alignParentBottom="true"
-                                android:layout_centerHorizontal="true"
-                                android:layout_marginBottom="25dp"
-                                android:text="998"
-                                android:textColor="@color/white"
-                                android:textSize="18sp"
-                                android:textStyle="bold" />
+                        </com.google.android.material.card.MaterialCardView>
 
-                            <ImageView
-                                android:layout_width="15dp"
-                                android:layout_height="15dp"
-                                android:layout_alignParentEnd="true"
-                                android:layout_alignParentBottom="true"
-                                android:layout_margin="4dp"
-                                android:scaleType="centerCrop"
-                                android:src="@drawable/polygon" />
+                        <com.google.android.material.card.MaterialCardView
+                            android:id="@+id/btn_public_pending_question"
+                            android:layout_width="0dp"
+                            android:layout_height="80dp"
+                            android:layout_margin="4dp"
+                            android:layout_weight="1"
+                            android:backgroundTint="@color/profile_card_background_color_3"
+                            android:clickable="true"
+                            android:elevation="4dp"
+                            android:focusable="true"
+                            app:cardCornerRadius="12dp">
 
-                        </RelativeLayout>
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent">
 
-                    </com.google.android.material.card.MaterialCardView>
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_centerHorizontal="true"
+                                    android:layout_marginStart="10dp"
+                                    android:layout_marginTop="10dp"
+                                    android:layout_marginEnd="10dp"
+                                    android:layout_marginBottom="10dp"
+                                    android:text="@string/pending"
+                                    android:textColor="@color/white"
+                                    android:textSize="10dp"
+                                    android:textStyle="bold" />
 
-                    <com.google.android.material.card.MaterialCardView
-                        android:layout_width="0dp"
-                        android:layout_height="80dp"
-                        android:layout_margin="4dp"
-                        android:layout_weight="1"
-                        android:backgroundTint="@color/profile_card_background_color_3"
-                        android:clickable="true"
-                        android:elevation="4dp"
-                        android:focusable="true"
-                        app:cardCornerRadius="12dp">
+                                <TextView
+                                    android:id="@+id/public_total_pending"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignParentBottom="true"
+                                    android:layout_centerHorizontal="true"
+                                    android:layout_marginBottom="25dp"
+                                    android:text="11"
+                                    android:textColor="@color/white"
+                                    android:textSize="18sp"
+                                    android:textStyle="bold" />
 
-                        <RelativeLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent">
+                                <ImageView
+                                    android:layout_width="15dp"
+                                    android:layout_height="15dp"
+                                    android:layout_alignParentEnd="true"
+                                    android:layout_alignParentBottom="true"
+                                    android:layout_margin="4dp"
+                                    android:scaleType="centerCrop"
+                                    android:src="@drawable/polygon" />
 
-                            <TextView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_centerHorizontal="true"
-                                android:layout_marginStart="10dp"
-                                android:layout_marginTop="10dp"
-                                android:layout_marginEnd="10dp"
-                                android:layout_marginBottom="10dp"
-                                android:text="@string/pending"
-                                android:textColor="@color/white"
-                                android:textSize="10dp"
-                                android:textStyle="bold" />
-
-                            <TextView
-                                android:id="@+id/public_total_pending"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_alignParentBottom="true"
-                                android:layout_centerHorizontal="true"
-                                android:layout_marginBottom="25dp"
-                                android:text="11"
-                                android:textColor="@color/white"
-                                android:textSize="18sp"
-                                android:textStyle="bold" />
-
-                            <ImageView
-                                android:layout_width="15dp"
-                                android:layout_height="15dp"
-                                android:layout_alignParentEnd="true"
-                                android:layout_alignParentBottom="true"
-                                android:layout_margin="4dp"
-                                android:scaleType="centerCrop"
-                                android:src="@drawable/polygon" />
-
-                        </RelativeLayout>
+                            </RelativeLayout>
 
 
-                    </com.google.android.material.card.MaterialCardView>
+                        </com.google.android.material.card.MaterialCardView>
 
-                </LinearLayout>
+                    </LinearLayout>
 
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="12sp"
-                    android:orientation="horizontal">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="12sp"
+                        android:orientation="horizontal">
 
-                    <ImageView
-                        android:layout_width="12dp"
-                        android:layout_height="15dp"
+                        <ImageView
+                            android:layout_width="12dp"
+                            android:layout_height="15dp"
+                            android:layout_marginTop="4dp"
+                            android:scaleType="centerCrop"
+                            android:src="@drawable/privet" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginStart="11dp"
+                            android:text="@string/private_question"
+                            android:textColor="@color/textColor_primary"
+                            android:textSize="16sp"
+                            android:textStyle="bold" />
+
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="3dp"
                         android:layout_marginTop="4dp"
-                        android:scaleType="centerCrop"
-                        android:src="@drawable/privet" />
+                        android:background="@color/profile_line_color" />
 
-                    <TextView
-                        android:layout_width="wrap_content"
+                    <LinearLayout
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_gravity="center_vertical"
-                        android:layout_marginStart="11dp"
-                        android:text="@string/private_question"
-                        android:textColor="@color/textColor_primary"
-                        android:textSize="16sp"
-                        android:textStyle="bold" />
+                        android:layout_marginStart="8sp"
+                        android:layout_marginTop="8sp"
+                        android:layout_marginEnd="8sp"
+                        android:orientation="horizontal">
 
-                </LinearLayout>
+                        <com.google.android.material.card.MaterialCardView
+                            android:id="@+id/btn_all_private_question"
+                            android:layout_width="0dp"
+                            android:layout_height="80dp"
+                            android:layout_margin="4dp"
+                            android:layout_weight="1"
+                            android:backgroundTint="@color/profile_card_background_color_1"
+                            android:clickable="true"
+                            android:elevation="4dp"
+                            android:focusable="true"
+                            app:cardCornerRadius="12dp">
 
-                <View
-                    android:layout_width="match_parent"
-                    android:layout_height="3dp"
-                    android:layout_marginTop="4dp"
-                    android:background="@color/profile_line_color" />
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent">
 
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="8sp"
-                    android:layout_marginTop="8sp"
-                    android:layout_marginEnd="8sp"
-                    android:orientation="horizontal">
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_centerHorizontal="true"
+                                    android:layout_margin="10dp"
+                                    android:text="@string/total_question"
+                                    android:textColor="@color/textColor_primary"
+                                    android:textSize="10dp"
+                                    android:textStyle="bold" />
 
-                    <com.google.android.material.card.MaterialCardView
-                        android:layout_width="0dp"
-                        android:layout_height="80dp"
-                        android:layout_margin="4dp"
-                        android:layout_weight="1"
-                        android:backgroundTint="@color/profile_card_background_color_1"
-                        android:clickable="true"
-                        android:elevation="4dp"
-                        android:focusable="true"
-                        app:cardCornerRadius="12dp">
+                                <TextView
+                                    android:id="@+id/private_total_question"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignParentBottom="true"
+                                    android:layout_centerHorizontal="true"
+                                    android:layout_marginBottom="25dp"
+                                    android:text="1000"
+                                    android:textColor="@color/textColor_primary"
+                                    android:textSize="18sp"
+                                    android:textStyle="bold" />
+                            </RelativeLayout>
 
-                        <RelativeLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent">
+                        </com.google.android.material.card.MaterialCardView>
 
-                            <TextView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_centerHorizontal="true"
-                                android:layout_margin="10dp"
-                                android:text="@string/total_question"
-                                android:textColor="@color/textColor_primary"
-                                android:textSize="10dp"
-                                android:textStyle="bold" />
+                        <com.google.android.material.card.MaterialCardView
+                            android:id="@+id/btn_private_question_answer"
+                            android:layout_width="0dp"
+                            android:layout_height="80dp"
+                            android:layout_margin="4dp"
+                            android:layout_weight="1"
+                            android:backgroundTint="@color/profile_card_background_color_2"
+                            android:clickable="true"
+                            android:elevation="4dp"
+                            android:focusable="true"
+                            app:cardCornerRadius="12dp">
 
-                            <TextView
-                                android:id="@+id/private_total_question"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_alignParentBottom="true"
-                                android:layout_centerHorizontal="true"
-                                android:layout_marginBottom="25dp"
-                                android:text="1000"
-                                android:textColor="@color/textColor_primary"
-                                android:textSize="18sp"
-                                android:textStyle="bold" />
-                        </RelativeLayout>
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent">
 
-                    </com.google.android.material.card.MaterialCardView>
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_centerHorizontal="true"
+                                    android:layout_marginStart="10dp"
+                                    android:layout_marginTop="10dp"
+                                    android:layout_marginEnd="10dp"
+                                    android:layout_marginBottom="10dp"
+                                    android:text="@string/answered"
+                                    android:textColor="@color/white"
+                                    android:textSize="10dp"
+                                    android:textStyle="bold" />
 
-                    <com.google.android.material.card.MaterialCardView
-                        android:layout_width="0dp"
-                        android:layout_height="80dp"
-                        android:layout_margin="4dp"
-                        android:layout_weight="1"
-                        android:backgroundTint="@color/profile_card_background_color_2"
-                        android:clickable="true"
-                        android:elevation="4dp"
-                        android:focusable="true"
-                        app:cardCornerRadius="12dp">
+                                <TextView
+                                    android:id="@+id/private_total_answered"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignParentBottom="true"
+                                    android:layout_centerHorizontal="true"
+                                    android:layout_marginBottom="25dp"
+                                    android:text="998"
+                                    android:textColor="@color/white"
+                                    android:textSize="18sp"
+                                    android:textStyle="bold" />
 
-                        <RelativeLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent">
+                                <ImageView
+                                    android:layout_width="15dp"
+                                    android:layout_height="15dp"
+                                    android:layout_alignParentEnd="true"
+                                    android:layout_alignParentBottom="true"
+                                    android:layout_margin="4dp"
+                                    android:scaleType="centerCrop"
+                                    android:src="@drawable/polygon" />
 
-                            <TextView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_centerHorizontal="true"
-                                android:layout_marginStart="10dp"
-                                android:layout_marginTop="10dp"
-                                android:layout_marginEnd="10dp"
-                                android:layout_marginBottom="10dp"
-                                android:text="@string/answered"
-                                android:textColor="@color/white"
-                                android:textSize="10dp"
-                                android:textStyle="bold" />
+                            </RelativeLayout>
 
-                            <TextView
-                                android:id="@+id/private_total_answered"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_alignParentBottom="true"
-                                android:layout_centerHorizontal="true"
-                                android:layout_marginBottom="25dp"
-                                android:text="998"
-                                android:textColor="@color/white"
-                                android:textSize="18sp"
-                                android:textStyle="bold" />
+                        </com.google.android.material.card.MaterialCardView>
 
-                            <ImageView
-                                android:layout_width="15dp"
-                                android:layout_height="15dp"
-                                android:layout_alignParentEnd="true"
-                                android:layout_alignParentBottom="true"
-                                android:layout_margin="4dp"
-                                android:scaleType="centerCrop"
-                                android:src="@drawable/polygon" />
+                        <com.google.android.material.card.MaterialCardView
+                            android:id="@+id/btn_private_pending_question"
+                            android:layout_width="0dp"
+                            android:layout_height="80dp"
+                            android:layout_margin="4dp"
+                            android:layout_weight="1"
+                            android:backgroundTint="@color/profile_card_background_color_3"
+                            android:clickable="true"
+                            android:elevation="4dp"
+                            android:focusable="true"
+                            app:cardCornerRadius="12dp">
 
-                        </RelativeLayout>
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent">
 
-                    </com.google.android.material.card.MaterialCardView>
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_centerHorizontal="true"
+                                    android:layout_marginStart="10dp"
+                                    android:layout_marginTop="10dp"
+                                    android:layout_marginEnd="10dp"
+                                    android:layout_marginBottom="10dp"
+                                    android:text="@string/pending"
+                                    android:textColor="@color/white"
+                                    android:textSize="10dp"
+                                    android:textStyle="bold" />
 
-                    <com.google.android.material.card.MaterialCardView
-                        android:layout_width="0dp"
-                        android:layout_height="80dp"
-                        android:layout_margin="4dp"
-                        android:layout_weight="1"
-                        android:backgroundTint="@color/profile_card_background_color_3"
-                        android:clickable="true"
-                        android:elevation="4dp"
-                        android:focusable="true"
-                        app:cardCornerRadius="12dp">
+                                <TextView
+                                    android:id="@+id/private_total_pending"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignParentBottom="true"
+                                    android:layout_centerHorizontal="true"
+                                    android:layout_marginBottom="25dp"
+                                    android:text="11"
+                                    android:textColor="@color/white"
+                                    android:textSize="18sp"
+                                    android:textStyle="bold" />
 
-                        <RelativeLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent">
+                                <ImageView
+                                    android:layout_width="15dp"
+                                    android:layout_height="15dp"
+                                    android:layout_alignParentEnd="true"
+                                    android:layout_alignParentBottom="true"
+                                    android:layout_margin="4dp"
+                                    android:scaleType="centerCrop"
+                                    android:src="@drawable/polygon" />
 
-                            <TextView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_centerHorizontal="true"
-                                android:layout_marginStart="10dp"
-                                android:layout_marginTop="10dp"
-                                android:layout_marginEnd="10dp"
-                                android:layout_marginBottom="10dp"
-                                android:text="@string/pending"
-                                android:textColor="@color/white"
-                                android:textSize="10dp"
-                                android:textStyle="bold" />
-
-                            <TextView
-                                android:id="@+id/private_total_pending"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_alignParentBottom="true"
-                                android:layout_centerHorizontal="true"
-                                android:layout_marginBottom="25dp"
-                                android:text="11"
-                                android:textColor="@color/white"
-                                android:textSize="18sp"
-                                android:textStyle="bold" />
-
-                            <ImageView
-                                android:layout_width="15dp"
-                                android:layout_height="15dp"
-                                android:layout_alignParentEnd="true"
-                                android:layout_alignParentBottom="true"
-                                android:layout_margin="4dp"
-                                android:scaleType="centerCrop"
-                                android:src="@drawable/polygon" />
-
-                        </RelativeLayout>
+                            </RelativeLayout>
 
 
-                    </com.google.android.material.card.MaterialCardView>
+                        </com.google.android.material.card.MaterialCardView>
 
-                </LinearLayout>
+                    </LinearLayout>
 
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="20dp"
-                    android:orientation="horizontal">
-
-                    <androidx.constraintlayout.widget.ConstraintLayout
-                        android:layout_width="wrap_content"
+                    <LinearLayout
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_marginLeft="12dp">
+                        android:layout_marginTop="20dp"
+                        android:orientation="horizontal">
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="12dp">
+
+
+                            <TextView
+                                android:id="@+id/btn_correction_req"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerHorizontal="true"
+                                android:background="@drawable/profile_edit_text_background_red"
+                                android:paddingStart="10dp"
+                                android:paddingTop="6dp"
+                                android:paddingEnd="10dp"
+                                android:paddingBottom="6dp"
+                                android:text="@string/correction_req"
+                                android:textColor="@color/intro_bg"
+                                android:textSize="10sp"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent" />
+
+                            <TextView
+                                android:id="@+id/textView4"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerHorizontal="true"
+                                android:background="@drawable/profile_edit_text_background_red_border"
+                                android:padding="6dp"
+                                android:text="03"
+                                android:textColor="#0E1723"
+                                android:textSize="8sp"
+                                app:layout_constraintBottom_toTopOf="@+id/btn_correction_req"
+                                app:layout_constraintEnd_toEndOf="@+id/btn_correction_req"
+                                app:layout_constraintStart_toEndOf="@+id/btn_correction_req"
+                                app:layout_constraintTop_toTopOf="@+id/btn_correction_req" />
+
+                        </androidx.constraintlayout.widget.ConstraintLayout>
 
 
                         <TextView
-                            android:id="@+id/btn_correction_req"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_centerHorizontal="true"
-                            android:background="@drawable/profile_edit_text_background_red"
+                            android:layout_gravity="center_vertical"
+                            android:layout_margin="8dp"
+                            android:background="@drawable/profile_edit_text_background"
                             android:paddingStart="10dp"
                             android:paddingTop="6dp"
                             android:paddingEnd="10dp"
                             android:paddingBottom="6dp"
-                            android:text="@string/correction_req"
-                            android:textColor="@color/intro_bg"
-                            android:textSize="10sp"
-                            app:layout_constraintBottom_toBottomOf="parent"
-                            app:layout_constraintStart_toStartOf="parent"
-                            app:layout_constraintTop_toTopOf="parent" />
+                            android:text="@string/all_question"
+                            android:textColor="@color/textColor_primary"
+                            android:textSize="10sp" />
 
                         <TextView
-                            android:id="@+id/textView4"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_centerHorizontal="true"
-                            android:background="@drawable/profile_edit_text_background_red_border"
-                            android:padding="6dp"
-                            android:text="03"
-                            android:textColor="#0E1723"
-                            android:textSize="8sp"
-                            app:layout_constraintBottom_toTopOf="@+id/btn_correction_req"
-                            app:layout_constraintEnd_toEndOf="@+id/btn_correction_req"
-                            app:layout_constraintStart_toEndOf="@+id/btn_correction_req"
-                            app:layout_constraintTop_toTopOf="@+id/btn_correction_req" />
+                            android:layout_gravity="center_vertical"
+                            android:layout_margin="8dp"
+                            android:background="@drawable/profile_edit_text_background"
+                            android:paddingStart="10dp"
+                            android:paddingTop="6dp"
+                            android:paddingEnd="10dp"
+                            android:paddingBottom="6dp"
+                            android:text="@string/saved_questions"
+                            android:textColor="@color/textColor_primary"
+                            android:textSize="10sp" />
 
-                    </androidx.constraintlayout.widget.ConstraintLayout>
+                    </LinearLayout>
 
+                </LinearLayout>
 
-                    <TextView
-                        android:layout_width="wrap_content"
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:orientation="vertical">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_centerHorizontal="true"
-                        android:layout_gravity="center_vertical"
-                        android:layout_margin="8dp"
-                        android:background="@drawable/profile_edit_text_background"
-                        android:paddingStart="10dp"
+                        android:background="@color/profile_line_color_2"
+                        android:paddingStart="20dp"
                         android:paddingTop="6dp"
-                        android:paddingEnd="10dp"
-                        android:paddingBottom="6dp"
-                        android:text="@string/all_question"
-                        android:textColor="@color/textColor_primary"
-                        android:textSize="10sp" />
+                        android:paddingEnd="20dp"
+                        android:paddingBottom="6dp">
 
-                    <TextView
-                        android:layout_width="wrap_content"
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentStart="true"
+                            android:text="@string/personal_info"
+                            android:textColor="@color/textColor_primary"
+                            android:textSize="14sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/btn_edit"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentEnd="true"
+                            android:text="@string/edit"
+                            android:textColor="@color/theme_color"
+                            android:textSize="14sp" />
+
+                    </RelativeLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_centerHorizontal="true"
-                        android:layout_gravity="center_vertical"
-                        android:layout_margin="8dp"
-                        android:background="@drawable/profile_edit_text_background"
-                        android:paddingStart="10dp"
-                        android:paddingTop="6dp"
-                        android:paddingEnd="10dp"
-                        android:paddingBottom="6dp"
-                        android:text="@string/saved_questions"
-                        android:textColor="@color/textColor_primary"
-                        android:textSize="10sp" />
+                        android:orientation="horizontal"
+                        android:paddingStart="20dp"
+                        android:paddingEnd="20dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:drawableStart="@drawable/profile_icon"
+                            android:drawablePadding="6dp"
+                            android:text="Name"
+                            android:textColor="@color/textColor_primary"
+                            android:textSize="14sp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text=" :  "
+                            android:textColor="@color/textColor_primary"
+                            android:textSize="14sp" />
+
+                        <TextView
+                            android:id="@+id/tvName"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Ahsan Ullah"
+                            android:textColor="@color/textColor_primary"
+                            android:textSize="14sp"
+                            android:textStyle="bold" />
+
+                        <EditText
+                            android:id="@+id/etName"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:inputType="text"
+                            android:text="Ahsan Ullah"
+                            android:textColor="@color/textColor_primary"
+                            android:textSize="14sp"
+                            android:textStyle="bold"
+                            android:visibility="gone" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:paddingStart="20dp"
+                        android:paddingEnd="20dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:drawableStart="@drawable/email"
+                            android:drawablePadding="6dp"
+                            android:text="@string/email_mobile_no"
+                            android:textColor="@color/textColor_primary"
+                            android:textSize="14sp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text=" :  "
+                            android:textColor="@color/textColor_primary"
+                            android:textSize="14sp" />
+
+                        <TextView
+                            android:id="@+id/tvEmail"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="ahs*****@gmail.com"
+                            android:textColor="@color/textColor_primary"
+                            android:textSize="14sp"
+                            android:textStyle="bold" />
+
+                        <EditText
+                            android:id="@+id/etEmail"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:inputType="text"
+                            android:text="ahs*****@gmail.com"
+                            android:textColor="@color/textColor_primary"
+                            android:textSize="14sp"
+                            android:textStyle="bold"
+                            android:visibility="gone" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:paddingStart="20dp"
+                        android:paddingEnd="20dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:drawableStart="@drawable/gender"
+                            android:drawablePadding="6dp"
+                            android:text="@string/gender"
+                            android:textColor="@color/textColor_primary"
+                            android:textSize="14sp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text=" :  "
+                            android:textColor="@color/textColor_primary"
+                            android:textSize="14sp" />
+
+                        <TextView
+                            android:id="@+id/tvGender"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Male"
+                            android:textColor="@color/textColor_primary"
+                            android:textSize="14sp"
+                            android:textStyle="bold" />
+
+                        <EditText
+                            android:id="@+id/etGender"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:inputType="text"
+                            android:text="Male"
+                            android:textColor="@color/textColor_primary"
+                            android:textSize="14sp"
+                            android:textStyle="bold"
+                            android:visibility="gone" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_marginTop="10dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:textSize="11sp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/textColor_primary"
+                            android:text="@string/last_update_your_password_2_months_ago"/>
+
+                        <TextView
+                            android:layout_marginStart="6dp"
+                            android:id="@+id/btn_forgot_password"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:text="@string/forgot_password"
+                            android:textStyle="bold"
+                            android:textColor="@color/theme_color"
+                            android:textSize="11sp" />
+                    </LinearLayout>
 
                 </LinearLayout>
 
@@ -584,17 +800,17 @@
             android:layout_marginEnd="16dp"
             android:layout_marginBottom="42dp"
             android:contentDescription="fab_content_desc"
-            app:tint="@color/white"
             app:fabSize="mini"
-            app:srcCompat="@drawable/ic_baseline_add_24"/>
+            app:srcCompat="@drawable/ic_baseline_add_24"
+            app:tint="@color/white" />
 
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="bottom|end"
-            android:background="@drawable/profile_edit_text_background_theme"
             android:layout_margin="16dp"
+            android:background="@drawable/profile_edit_text_background_theme"
             android:paddingStart="10dp"
             android:paddingTop="4dp"
             android:paddingEnd="10dp"

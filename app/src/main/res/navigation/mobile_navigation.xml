@@ -7,7 +7,7 @@
 
     <fragment
         android:id="@+id/navigation_home"
-        android:name="com.labbaiik.app.view.fragments.HomeFragment"
+        android:name="com.labbaiik.app.view.fragments.home.HomeFragment"
         android:label=""
         tools:layout="@layout/fragment_home" />
 
@@ -19,7 +19,7 @@
 
     <fragment
         android:id="@+id/navigation_profile"
-        android:name="com.labbaiik.app.view.fragments.userProfile.ProfileFragment"
+        android:name="com.labbaiik.app.view.fragments.userProfile.UserProfileFragment"
         android:label=""
         tools:layout="@layout/fragment_profile" />
 
@@ -46,6 +46,24 @@
         android:name="com.labbaiik.app.view.fragments.userProfile.AllQuestionFragment"
         android:label=""
         tools:layout="@layout/fragment_all_question" />
+
+    <fragment
+        android:id="@+id/navigation_prayer_time"
+        android:name="com.labbaiik.app.view.fragments.home.PrayerTimeFragment"
+        android:label=""
+        tools:layout="@layout/fragment_prayer_time" />
+
+    <fragment
+        android:id="@+id/navigation_dua"
+        android:name="com.labbaiik.app.view.fragments.home.DuaFragment"
+        android:label=""
+        tools:layout="@layout/fragment_dua" />
+
+    <fragment
+        android:id="@+id/navigation_dua_details"
+        android:name="com.labbaiik.app.view.fragments.home.DuaDetailsFragment"
+        android:label=""
+        tools:layout="@layout/fragment_dua_details" />
 
 
 </navigation>

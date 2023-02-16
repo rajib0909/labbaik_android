@@ -6,7 +6,7 @@
         xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:context=".view.fragments.userProfile.ProfileFragment">
+        tools:context=".view.fragments.userProfile.UserProfileFragment">
 
         <androidx.core.widget.NestedScrollView
             android:layout_width="match_parent"
@@ -733,29 +733,29 @@
                     </LinearLayout>
 
                     <LinearLayout
-                        android:layout_marginTop="10dp"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
                         android:gravity="center"
                         android:orientation="horizontal">
 
                         <TextView
-                            android:textSize="11sp"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
+                            android:text="@string/last_update_your_password_2_months_ago"
                             android:textColor="@color/textColor_primary"
-                            android:text="@string/last_update_your_password_2_months_ago"/>
+                            android:textSize="11sp" />
 
                         <TextView
-                            android:layout_marginStart="6dp"
                             android:id="@+id/btn_forgot_password"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_gravity="center"
+                            android:layout_marginStart="6dp"
                             android:text="@string/forgot_password"
-                            android:textStyle="bold"
                             android:textColor="@color/theme_color"
-                            android:textSize="11sp" />
+                            android:textSize="11sp"
+                            android:textStyle="bold" />
                     </LinearLayout>
 
                 </LinearLayout>

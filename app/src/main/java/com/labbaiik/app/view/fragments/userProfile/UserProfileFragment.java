@@ -15,7 +15,7 @@ import com.labbaiik.app.R;
 import com.labbaiik.app.databinding.FragmentProfileBinding;
 
 
-public class ProfileFragment extends Fragment {
+public class UserProfileFragment extends Fragment {
     FragmentProfileBinding binding;
     private boolean isEditClick = false;
 

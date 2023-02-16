@@ -28,6 +28,7 @@
     <color name="textColor_mufti_name">#00A99D</color>
     <color name="primary_button_color">#00A99D</color>
     <color name="line_color">#7F868D</color>
+    <color name="line_color_2">#A6E1DC</color>
     <color name="color_input_text_background">#FFFFFF</color>
     <color name="color_input_text_background_profile">#F2F7F9</color>
     <color name="color_input_text_icon">#00A99D</color>
@@ -37,6 +38,7 @@
     <color name="color_signup_selection_text_bg">#8290A0</color>
     <color name="color_signup_selection_text_bg_active">#8290A0</color>
     <color name="color_red">#F55D5D</color>
+    <color name="color_red_light">#F59C9C</color>
     <color name="color_red_day_night">#F55D5D</color>
     <color name="selection_account_bg">#00A99D</color>
     <color name="selection_account_bg_line">#B9E2DF</color>
@@ -50,4 +52,11 @@
     <color name="profile_card_background_color_1">#F2F7F9</color>
     <color name="profile_card_background_color_2">#30B8AF</color>
     <color name="profile_card_background_color_3">#728294</color>
+    <color name="home_bg_1">#DFECEB</color>
+    <color name="home_card_bg_1">#E1F6F3</color>
+    <color name="home_card_bg_2">#F69292</color>
+    <color name="tv_bg_1">#DFE5E8</color>
+    <color name="tv_bg_2">#6B737B</color>
+    <color name="tv_bg_3">#FFFACB</color>
+    <color name="prayer_time_bg_1">#89D4CE</color>
 </resources>

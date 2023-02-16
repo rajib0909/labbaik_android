@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/background_color"
+        tools:context=".view.fragments.home.DuaDetailsFragment">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:layout_alignParentTop="true"
+            android:background="@color/toolbar_color">
+
+
+            <ImageView
+                android:id="@+id/btn_back"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/previous" />
+
+            <TextView
+                android:id="@+id/toolbarTxt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="Dua Name"
+                android:textColor="@color/white"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+        </androidx.appcompat.widget.Toolbar>
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/toolbar"
+            android:clipToPadding="false"
+            android:paddingBottom="20dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:padding="10dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/duaTitle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginEnd="10dp"
+                        android:layout_marginBottom="10dp"
+                        android:text="ঈমান নবায়নের দু‘আ"
+                        android:textColor="@color/textColor_primary"
+                        android:textSize="17sp" />
+
+
+                    <ImageView
+                        android:id="@+id/btnShare"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_alignParentEnd="true"
+                        android:layout_centerInParent="true"
+                        android:layout_marginEnd="10dp"
+                        android:src="@drawable/ic_baseline_share_24" />
+
+
+                    <ImageView
+                        android:id="@+id/btnSave"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_centerInParent="true"
+                        android:layout_marginEnd="10dp"
+                        android:layout_toLeftOf="@+id/btnShare"
+                        android:src="@drawable/ic_baseline_favorite_border_24" />
+
+
+                </RelativeLayout>
+
+                <TextView
+                    android:id="@+id/duaArbi"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:text="محرك بحث الترجمات الفرنسية-العربية، الفرنسية كلمات و تعبيرات مترجمة إلى العربية مع أمثلة استخدام في كلتا اللغتين. تصريف الأفعال في العربية ، نطق الأمثلة في الفرنسية ، مفردات الفرنسية-العربية"
+                    android:textColor="@color/textColor_primary"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/duaBangla"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:text="আধুনিক কর্মব্যস্ত জীবনে তথ্যপ্রযুক্তির উন্নতি মানুষকে অগ্রগতির পথে নিয়ে গেলেও তাকে যান্ত্রিক করে তুলেছে আর তার ভুক্তভোগী আমাদের পরবর্তী প্রজন্মের শিশুরা। কথায় আছে কাউকে কিছু উপদেশ দিয়ে শেখানোর থেকে উদাহরণ দিয়ে শেখানো সহজতর। আর এই ক্ষেত্রে ছোটদের জন্য রচিত নীতিমূলক গল্পের ভূমিকা অগ্রগণ্য।"
+                    android:textColor="@color/textColor_primary"
+                    android:textSize="16sp" />
+
+
+            </LinearLayout>
+        </androidx.core.widget.NestedScrollView>
+    </RelativeLayout>
+</layout>

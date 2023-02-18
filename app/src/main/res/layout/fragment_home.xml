@@ -484,6 +484,7 @@
                         android:orientation="vertical">
 
                         <com.google.android.material.card.MaterialCardView
+                            android:id="@+id/btnCalender"
                             android:layout_width="55dp"
                             android:layout_height="55dp"
                             android:layout_margin="8dp"
@@ -501,7 +502,7 @@
 
                                 <ImageView
                                     android:layout_width="30sp"
-                                    android:layout_height="30sp"
+                                    android:layout_height="32dp"
                                     android:src="@drawable/calendar" />
 
                             </LinearLayout>
@@ -723,6 +724,7 @@
                         android:orientation="vertical">
 
                         <com.google.android.material.card.MaterialCardView
+                            android:id="@+id/btnConnection"
                             android:layout_width="55dp"
                             android:layout_height="55dp"
                             android:layout_margin="8dp"

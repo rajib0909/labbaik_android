@@ -28,14 +28,24 @@ public class HomeFragment extends Fragment {
 
         binding = DataBindingUtil.inflate(inflater, R.layout.fragment_home, container, false);
 
-        binding.btnPrayerTime.setOnClickListener(l->{
+        binding.btnPrayerTime.setOnClickListener(l -> {
             NavController navController = Navigation.findNavController(getActivity(), R.id.nav_host_fragment);
             navController.navigate(R.id.navigation_prayer_time);
         });
 
-        binding.btnDua.setOnClickListener(l->{
+        binding.btnDua.setOnClickListener(l -> {
             NavController navController = Navigation.findNavController(getActivity(), R.id.nav_host_fragment);
             navController.navigate(R.id.navigation_dua);
+        });
+
+        binding.btnCalender.setOnClickListener(l -> {
+            NavController navController = Navigation.findNavController(getActivity(), R.id.nav_host_fragment);
+            navController.navigate(R.id.navigation_calender);
+        });
+
+        binding.btnConnection.setOnClickListener(l -> {
+            NavController navController = Navigation.findNavController(getActivity(), R.id.nav_host_fragment);
+            navController.navigate(R.id.navigation_connection);
         });
 
 

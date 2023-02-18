@@ -18,6 +18,12 @@
         tools:layout="@layout/fragment_questions" />
 
     <fragment
+        android:id="@+id/navigation_video_list"
+        android:name="com.labbaiik.app.view.fragments.video.VideoListFragment"
+        android:label=""
+        tools:layout="@layout/fragment_video_list" />
+
+    <fragment
         android:id="@+id/navigation_profile"
         android:name="com.labbaiik.app.view.fragments.userProfile.UserProfileFragment"
         android:label=""
@@ -64,6 +70,18 @@
         android:name="com.labbaiik.app.view.fragments.home.DuaDetailsFragment"
         android:label=""
         tools:layout="@layout/fragment_dua_details" />
+
+    <fragment
+        android:id="@+id/navigation_calender"
+        android:name="com.labbaiik.app.view.fragments.home.CalenderFragment"
+        android:label=""
+        tools:layout="@layout/fragment_calender" />
+
+    <fragment
+        android:id="@+id/navigation_connection"
+        android:name="com.labbaiik.app.view.fragments.home.ConnectFragment"
+        android:label=""
+        tools:layout="@layout/fragment_connect" />
 
 
 </navigation>

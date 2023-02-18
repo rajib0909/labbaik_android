@@ -12,6 +12,11 @@
         android:title="@string/questions" />
 
     <item
+        android:id="@+id/navigation_video_list"
+        android:icon="@drawable/ic_baseline_video_library_24"
+        android:title="@string/videos" />
+
+    <item
         android:id="@+id/navigation_profile"
         android:icon="@drawable/ic_outline_person_24"
         android:title="@string/profile" />

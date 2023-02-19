@@ -10,87 +10,51 @@
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:background="@color/background_color"
             tools:context=".view.fragments.QuestionsFragment">
 
-            <androidx.appcompat.widget.Toolbar
-                android:id="@+id/toolbar"
-                android:layout_width="match_parent"
-                android:layout_height="?attr/actionBarSize"
-                android:layout_alignParentTop="true"
-                android:background="@color/toolbar_color">
+            <!--     <androidx.appcompat.widget.Toolbar
+                     android:id="@+id/toolbar"
+                     android:layout_width="match_parent"
+                     android:layout_height="?attr/actionBarSize"
+                     android:layout_alignParentTop="true"
+                     android:background="@color/toolbar_color">
 
 
-                <TextView
-                    android:id="@+id/toolbarTxt"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:text="@string/news_feed"
-                    android:textColor="@color/white"
-                    android:textSize="16sp"
-                    android:textStyle="bold" />
+                     <TextView
+                         android:id="@+id/toolbarTxt"
+                         android:layout_width="wrap_content"
+                         android:layout_height="wrap_content"
+                         android:layout_gravity="center"
+                         android:text="@string/news_feed"
+                         android:textColor="@color/white"
+                         android:textSize="16sp"
+                         android:textStyle="bold" />
 
-                <TextView
-                    android:id="@+id/btnLogin"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="end"
-                    android:layout_marginEnd="16dp"
-                    android:text="@string/login"
-                    android:textColor="@color/white"
-                    android:textSize="16sp"
-                    android:textStyle="bold" />
+                     <TextView
+                         android:id="@+id/btnLogin"
+                         android:layout_width="wrap_content"
+                         android:layout_height="wrap_content"
+                         android:layout_gravity="end"
+                         android:layout_marginEnd="16dp"
+                         android:text="@string/login"
+                         android:textColor="@color/white"
+                         android:textSize="16sp"
+                         android:textStyle="bold" />
 
-            </androidx.appcompat.widget.Toolbar>
+                 </androidx.appcompat.widget.Toolbar>
 
-
+     -->
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_below="@+id/toolbar"
                 android:orientation="vertical">
 
-                <RadioGroup
-                    android:id="@+id/radio_group"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center_horizontal"
-                    android:layout_marginTop="4dp"
-                    android:background="@drawable/radio_group"
-                    android:gravity="center_horizontal"
-                    android:orientation="horizontal">
-
-
-                    <RadioButton
-                        android:id="@+id/radio_questions"
-                        android:layout_width="173dp"
-                        android:layout_height="40dp"
-                        android:background="@drawable/radio_flat_selector"
-                        android:button="@android:color/transparent"
-                        android:checked="true"
-                        android:gravity="center"
-                        android:text="@string/questions"
-                        android:textColor="@color/radio_flat_text_selector"
-                        android:textSize="14sp" />
-
-                    <RadioButton
-                        android:id="@+id/radio_videos"
-                        android:layout_width="173dp"
-                        android:layout_height="40dp"
-                        android:background="@drawable/radio_flat_selector"
-                        android:button="@android:color/transparent"
-                        android:gravity="center"
-                        android:text="@string/videos"
-                        android:textColor="@color/radio_flat_text_selector"
-                        android:textSize="14sp" />
-
-                </RadioGroup>
 
                 <androidx.core.widget.NestedScrollView
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:clipToPadding="false"
-                    android:paddingBottom="20dp">
+                    android:clipToPadding="false">
 
 
                     <LinearLayout
@@ -98,655 +62,117 @@
                         android:layout_height="wrap_content"
                         android:orientation="vertical">
 
-
                         <LinearLayout
-                            android:id="@+id/questions_layout"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:orientation="vertical"
-                            android:visibility="visible">
+                            android:background="@color/theme_color"
+                            android:padding="10dp">
 
-                            <com.google.android.material.card.MaterialCardView
-                                android:layout_width="match_parent"
+                            <LinearLayout
+                                android:layout_width="0dp"
                                 android:layout_height="wrap_content"
-                                android:layout_margin="8dp"
-                                app:cardCornerRadius="6dp"
-                                app:cardElevation="6dp">
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:orientation="vertical">
 
-                                <LinearLayout
+                                <TextView
+                                    android:id="@+id/tvPrayerOaktoName"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="এখন: যোহর ওয়াক্ত"
+                                    android:textColor="@color/white"
+                                    android:textSize="14sp" />
+
+                                <TextView
+                                    android:id="@+id/tvPrayerOaktoTime"
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
-                                    android:orientation="vertical"
-                                    android:padding="12dp">
+                                    android:gravity="center"
+                                    android:text="11:59 AM - 4:39 PM"
+                                    android:textColor="@color/white"
+                                    android:textSize="14sp" />
 
-                                    <LinearLayout
-                                        android:layout_width="match_parent"
-                                        android:layout_height="wrap_content"
-                                        android:orientation="horizontal">
+                                <ImageView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="6dp"
+                                    android:src="@drawable/time_duration" />
 
-                                        <ImageView
-                                            android:layout_width="30sp"
-                                            android:layout_height="30sp"
-                                            android:layout_gravity="center"
-                                            android:src="@drawable/ic_edit_user" />
+                            </LinearLayout>
 
-                                        <TextView
-                                            android:layout_width="120dp"
-                                            android:layout_height="wrap_content"
-                                            android:layout_gravity="center_vertical"
-                                            android:layout_marginStart="10dp"
-                                            android:layout_marginTop="2dp"
-                                            android:text="Tanvir Ahmed"
-                                            android:textStyle="bold"
-                                            android:textColor="@color/textColor_1"
-                                            android:textSize="16sp"
-                                            tools:targetApi="p" />
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:orientation="vertical">
 
-                                        <TextView
-                                            android:layout_gravity="center_vertical"
-                                            android:layout_width="match_parent"
-                                            android:layout_height="wrap_content"
-                                            android:layout_marginTop="2dp"
-                                            android:text="5 hour age"
-                                            android:textColor="@color/textColor_1"
-                                            android:textFontWeight="600"
-                                            android:textSize="12sp"
-                                            tools:targetApi="p" />
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginEnd="10dp"
+                                    android:gravity="start"
+                                    android:text="@string/next_oakto"
+                                    android:textColor="@color/white"
+                                    android:textSize="14sp" />
 
-
-                                    </LinearLayout>
-
-                                    <TextView
-                                        android:layout_width="match_parent"
-                                        android:layout_height="wrap_content"
-                                        android:layout_marginTop="12dp"
-                                        android:text="This is question subject"
-                                        android:textColor="@color/textColor_1"
-                                        android:textFontWeight="600"
-                                        android:textSize="14sp"
-                                        tools:targetApi="p" />
-
-                                    <TextView
-                                        android:layout_width="match_parent"
-                                        android:layout_height="wrap_content"
-                                        android:layout_marginTop="4dp"
-                                        android:text="@string/demo_ans"
-                                        android:textColor="@color/textColor_1"
-                                        android:textSize="12sp"
-                                        tools:targetApi="p" />
-
-                                    <View
-                                        android:layout_width="match_parent"
-                                        android:layout_height="1dp"
-                                        android:layout_marginTop="8dp"
-                                        android:background="@color/textColor_3" />
-
-                                    <LinearLayout
-                                        android:layout_width="match_parent"
-                                        android:layout_height="wrap_content"
-                                        android:layout_marginTop="6dp"
-                                        android:orientation="horizontal">
-
-                                        <LinearLayout
-                                            android:layout_width="0dp"
-                                            android:layout_height="wrap_content"
-                                            android:layout_weight="1"
-                                            android:orientation="vertical">
-
-                                            <ImageView
-                                                android:layout_width="20dp"
-                                                android:layout_height="20dp"
-                                                android:layout_gravity="center"
-                                                android:src="@drawable/ic_baseline_favorite_border_24" />
-
-                                        </LinearLayout>
-
-
-                                        <View
-                                            android:layout_width="1dp"
-                                            android:layout_height="match_parent"
-                                            android:background="@color/textColor_3" />
-
-                                        <LinearLayout
-                                            android:layout_width="0dp"
-                                            android:layout_height="wrap_content"
-                                            android:layout_weight="1"
-                                            android:orientation="vertical">
-
-                                            <ImageView
-                                                android:layout_width="20dp"
-                                                android:layout_height="20dp"
-                                                android:layout_gravity="center"
-                                                android:src="@drawable/ic_baseline_share_24" />
-
-                                        </LinearLayout>
-
-
-                                    </LinearLayout>
-
-
-                                </LinearLayout>
-
-                            </com.google.android.material.card.MaterialCardView>
-
-                            <com.google.android.material.card.MaterialCardView
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:layout_margin="8dp"
-                                app:cardCornerRadius="6dp"
-                                app:cardElevation="6dp">
-
-                                <LinearLayout
+                                <com.google.android.material.card.MaterialCardView
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
-                                    android:orientation="vertical"
-                                    android:padding="12dp">
+                                    android:layout_marginTop="6dp"
+                                    android:backgroundTint="@color/home_card_bg_1"
+                                    android:clickable="true"
+                                    android:focusable="true"
+                                    app:cardCornerRadius="6dp">
 
-                                    <LinearLayout
+                                    <RelativeLayout
                                         android:layout_width="match_parent"
                                         android:layout_height="wrap_content"
-                                        android:orientation="horizontal">
+                                        android:padding="4dp">
 
                                         <ImageView
-                                            android:layout_width="30sp"
-                                            android:layout_height="30sp"
-                                            android:layout_gravity="center"
-                                            android:src="@drawable/ic_edit_user" />
+                                            android:id="@+id/icon"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_marginStart="6dp"
+                                            android:src="@drawable/sunset" />
 
                                         <TextView
-                                            android:layout_width="120dp"
+                                            android:layout_width="wrap_content"
                                             android:layout_height="wrap_content"
-                                            android:layout_gravity="center_vertical"
-                                            android:layout_marginStart="10dp"
-                                            android:layout_marginTop="2dp"
-                                            android:text="Tanvir Ahmed"
-                                            android:textStyle="bold"
-                                            android:textColor="@color/textColor_1"
-                                            android:textSize="16sp"
-                                            tools:targetApi="p" />
+                                            android:layout_marginStart="4dp"
+                                            android:layout_marginEnd="10dp"
+                                            android:layout_toEndOf="@+id/icon"
+                                            android:gravity="center_vertical"
+                                            android:text="আছর"
+                                            android:textColor="@color/textColor_primary"
+                                            android:textSize="10sp" />
 
                                         <TextView
-                                            android:layout_gravity="center_vertical"
-                                            android:layout_width="match_parent"
+                                            android:id="@+id/tvNextPrayerOaktoTime"
+                                            android:layout_width="wrap_content"
                                             android:layout_height="wrap_content"
-                                            android:layout_marginTop="2dp"
-                                            android:text="5 hour age"
-                                            android:textColor="@color/textColor_1"
-                                            android:textFontWeight="600"
-                                            android:textSize="12sp"
-                                            tools:targetApi="p" />
+                                            android:layout_alignParentEnd="true"
+                                            android:layout_marginEnd="10dp"
+                                            android:gravity="center"
+                                            android:text="11:59 AM - 4:39 PM"
+                                            android:textColor="@color/textColor_primary"
+                                            android:textSize="12sp" />
 
+                                    </RelativeLayout>
 
-                                    </LinearLayout>
 
-                                    <TextView
-                                        android:layout_width="match_parent"
-                                        android:layout_height="wrap_content"
-                                        android:layout_marginTop="12dp"
-                                        android:text="This is question subject"
-                                        android:textColor="@color/textColor_1"
-                                        android:textFontWeight="600"
-                                        android:textSize="14sp"
-                                        tools:targetApi="p" />
+                                </com.google.android.material.card.MaterialCardView>
 
-                                    <TextView
-                                        android:layout_width="match_parent"
-                                        android:layout_height="wrap_content"
-                                        android:layout_marginTop="4dp"
-                                        android:text="@string/demo_ans"
-                                        android:textColor="@color/textColor_1"
-                                        android:textSize="12sp"
-                                        tools:targetApi="p" />
-
-                                    <View
-                                        android:layout_width="match_parent"
-                                        android:layout_height="1dp"
-                                        android:layout_marginTop="8dp"
-                                        android:background="@color/textColor_3" />
-
-                                    <LinearLayout
-                                        android:layout_width="match_parent"
-                                        android:layout_height="wrap_content"
-                                        android:layout_marginTop="6dp"
-                                        android:orientation="horizontal">
-
-                                        <LinearLayout
-                                            android:layout_width="0dp"
-                                            android:layout_height="wrap_content"
-                                            android:layout_weight="1"
-                                            android:orientation="vertical">
-
-                                            <ImageView
-                                                android:layout_width="20dp"
-                                                android:layout_height="20dp"
-                                                android:layout_gravity="center"
-                                                android:src="@drawable/ic_baseline_favorite_border_24" />
-
-                                        </LinearLayout>
-
-
-                                        <View
-                                            android:layout_width="1dp"
-                                            android:layout_height="match_parent"
-                                            android:background="@color/textColor_3" />
-
-                                        <LinearLayout
-                                            android:layout_width="0dp"
-                                            android:layout_height="wrap_content"
-                                            android:layout_weight="1"
-                                            android:orientation="vertical">
-
-                                            <ImageView
-                                                android:layout_width="20dp"
-                                                android:layout_height="20dp"
-                                                android:layout_gravity="center"
-                                                android:src="@drawable/ic_baseline_share_24" />
-
-                                        </LinearLayout>
-
-
-                                    </LinearLayout>
-
-
-                                </LinearLayout>
-
-                            </com.google.android.material.card.MaterialCardView>
-
-                            <com.google.android.material.card.MaterialCardView
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:layout_margin="8dp"
-                                app:cardCornerRadius="6dp"
-                                app:cardElevation="6dp">
-
-                                <LinearLayout
-                                    android:layout_width="match_parent"
-                                    android:layout_height="wrap_content"
-                                    android:orientation="vertical"
-                                    android:padding="12dp">
-
-                                    <LinearLayout
-                                        android:layout_width="match_parent"
-                                        android:layout_height="wrap_content"
-                                        android:orientation="horizontal">
-
-                                        <ImageView
-                                            android:layout_width="30sp"
-                                            android:layout_height="30sp"
-                                            android:layout_gravity="center"
-                                            android:src="@drawable/ic_edit_user" />
-
-                                        <TextView
-                                            android:layout_width="120dp"
-                                            android:layout_height="wrap_content"
-                                            android:layout_gravity="center_vertical"
-                                            android:layout_marginStart="10dp"
-                                            android:layout_marginTop="2dp"
-                                            android:text="Tanvir Ahmed"
-                                            android:textStyle="bold"
-                                            android:textColor="@color/textColor_1"
-                                            android:textSize="16sp"
-                                            tools:targetApi="p" />
-
-                                        <TextView
-                                            android:layout_gravity="center_vertical"
-                                            android:layout_width="match_parent"
-                                            android:layout_height="wrap_content"
-                                            android:layout_marginTop="2dp"
-                                            android:text="5 hour age"
-                                            android:textColor="@color/textColor_1"
-                                            android:textFontWeight="600"
-                                            android:textSize="12sp"
-                                            tools:targetApi="p" />
-
-
-                                    </LinearLayout>
-
-                                    <TextView
-                                        android:layout_width="match_parent"
-                                        android:layout_height="wrap_content"
-                                        android:layout_marginTop="12dp"
-                                        android:text="This is question subject"
-                                        android:textColor="@color/textColor_1"
-                                        android:textFontWeight="600"
-                                        android:textSize="14sp"
-                                        tools:targetApi="p" />
-
-                                    <TextView
-                                        android:layout_width="match_parent"
-                                        android:layout_height="wrap_content"
-                                        android:layout_marginTop="4dp"
-                                        android:text="@string/demo_ans"
-                                        android:textColor="@color/textColor_1"
-                                        android:textSize="12sp"
-                                        tools:targetApi="p" />
-
-                                    <View
-                                        android:layout_width="match_parent"
-                                        android:layout_height="1dp"
-                                        android:layout_marginTop="8dp"
-                                        android:background="@color/textColor_3" />
-
-                                    <LinearLayout
-                                        android:layout_width="match_parent"
-                                        android:layout_height="wrap_content"
-                                        android:layout_marginTop="6dp"
-                                        android:orientation="horizontal">
-
-                                        <LinearLayout
-                                            android:layout_width="0dp"
-                                            android:layout_height="wrap_content"
-                                            android:layout_weight="1"
-                                            android:orientation="vertical">
-
-                                            <ImageView
-                                                android:layout_width="20dp"
-                                                android:layout_height="20dp"
-                                                android:layout_gravity="center"
-                                                android:src="@drawable/ic_baseline_favorite_border_24" />
-
-                                        </LinearLayout>
-
-
-                                        <View
-                                            android:layout_width="1dp"
-                                            android:layout_height="match_parent"
-                                            android:background="@color/textColor_3" />
-
-                                        <LinearLayout
-                                            android:layout_width="0dp"
-                                            android:layout_height="wrap_content"
-                                            android:layout_weight="1"
-                                            android:orientation="vertical">
-
-                                            <ImageView
-                                                android:layout_width="20dp"
-                                                android:layout_height="20dp"
-                                                android:layout_gravity="center"
-                                                android:src="@drawable/ic_baseline_share_24" />
-
-                                        </LinearLayout>
-
-
-                                    </LinearLayout>
-
-
-                                </LinearLayout>
-
-                            </com.google.android.material.card.MaterialCardView>
-
-
-                            <com.google.android.material.card.MaterialCardView
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:layout_margin="8dp"
-                                app:cardCornerRadius="6dp"
-                                app:cardElevation="6dp">
-
-                                <LinearLayout
-                                    android:layout_width="match_parent"
-                                    android:layout_height="wrap_content"
-                                    android:orientation="vertical"
-                                    android:padding="12dp">
-
-                                    <LinearLayout
-                                        android:layout_width="match_parent"
-                                        android:layout_height="wrap_content"
-                                        android:orientation="horizontal">
-
-                                        <ImageView
-                                            android:layout_width="30sp"
-                                            android:layout_height="30sp"
-                                            android:layout_gravity="center"
-                                            android:src="@drawable/ic_edit_user" />
-
-                                        <TextView
-                                            android:layout_width="120dp"
-                                            android:layout_height="wrap_content"
-                                            android:layout_gravity="center_vertical"
-                                            android:layout_marginStart="10dp"
-                                            android:layout_marginTop="2dp"
-                                            android:text="Tanvir Ahmed"
-                                            android:textStyle="bold"
-                                            android:textColor="@color/textColor_1"
-                                            android:textSize="16sp"
-                                            tools:targetApi="p" />
-
-                                        <TextView
-                                            android:layout_gravity="center_vertical"
-                                            android:layout_width="match_parent"
-                                            android:layout_height="wrap_content"
-                                            android:layout_marginTop="2dp"
-                                            android:text="5 hour age"
-                                            android:textColor="@color/textColor_1"
-                                            android:textFontWeight="600"
-                                            android:textSize="12sp"
-                                            tools:targetApi="p" />
-
-
-                                    </LinearLayout>
-
-                                    <TextView
-                                        android:layout_width="match_parent"
-                                        android:layout_height="wrap_content"
-                                        android:layout_marginTop="12dp"
-                                        android:text="This is question subject"
-                                        android:textColor="@color/textColor_1"
-                                        android:textFontWeight="600"
-                                        android:textSize="14sp"
-                                        tools:targetApi="p" />
-
-                                    <TextView
-                                        android:layout_width="match_parent"
-                                        android:layout_height="wrap_content"
-                                        android:layout_marginTop="4dp"
-                                        android:text="@string/demo_ans"
-                                        android:textColor="@color/textColor_1"
-                                        android:textSize="12sp"
-                                        tools:targetApi="p" />
-
-                                    <View
-                                        android:layout_width="match_parent"
-                                        android:layout_height="1dp"
-                                        android:layout_marginTop="8dp"
-                                        android:background="@color/textColor_3" />
-
-                                    <LinearLayout
-                                        android:layout_width="match_parent"
-                                        android:layout_height="wrap_content"
-                                        android:layout_marginTop="6dp"
-                                        android:orientation="horizontal">
-
-                                        <LinearLayout
-                                            android:layout_width="0dp"
-                                            android:layout_height="wrap_content"
-                                            android:layout_weight="1"
-                                            android:orientation="vertical">
-
-                                            <ImageView
-                                                android:layout_width="20dp"
-                                                android:layout_height="20dp"
-                                                android:layout_gravity="center"
-                                                android:src="@drawable/ic_baseline_favorite_border_24" />
-
-                                        </LinearLayout>
-
-
-                                        <View
-                                            android:layout_width="1dp"
-                                            android:layout_height="match_parent"
-                                            android:background="@color/textColor_3" />
-
-                                        <LinearLayout
-                                            android:layout_width="0dp"
-                                            android:layout_height="wrap_content"
-                                            android:layout_weight="1"
-                                            android:orientation="vertical">
-
-                                            <ImageView
-                                                android:layout_width="20dp"
-                                                android:layout_height="20dp"
-                                                android:layout_gravity="center"
-                                                android:src="@drawable/ic_baseline_share_24" />
-
-                                        </LinearLayout>
-
-
-                                    </LinearLayout>
-
-
-                                </LinearLayout>
-
-                            </com.google.android.material.card.MaterialCardView>
-
-
-                            <com.google.android.material.card.MaterialCardView
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:layout_margin="8dp"
-                                app:cardCornerRadius="6dp"
-                                app:cardElevation="6dp">
-
-                                <LinearLayout
-                                    android:layout_width="match_parent"
-                                    android:layout_height="wrap_content"
-                                    android:orientation="vertical"
-                                    android:padding="12dp">
-
-                                    <LinearLayout
-                                        android:layout_width="match_parent"
-                                        android:layout_height="wrap_content"
-                                        android:orientation="horizontal">
-
-                                        <ImageView
-                                            android:layout_width="30sp"
-                                            android:layout_height="30sp"
-                                            android:layout_gravity="center"
-                                            android:src="@drawable/ic_edit_user" />
-
-                                        <TextView
-                                            android:layout_width="120dp"
-                                            android:layout_height="wrap_content"
-                                            android:layout_gravity="center_vertical"
-                                            android:layout_marginStart="10dp"
-                                            android:layout_marginTop="2dp"
-                                            android:text="Tanvir Ahmed"
-                                            android:textStyle="bold"
-                                            android:textColor="@color/textColor_1"
-                                            android:textSize="16sp"
-                                            tools:targetApi="p" />
-
-                                        <TextView
-                                            android:layout_gravity="center_vertical"
-                                            android:layout_width="match_parent"
-                                            android:layout_height="wrap_content"
-                                            android:layout_marginTop="2dp"
-                                            android:text="5 hour age"
-                                            android:textColor="@color/textColor_1"
-                                            android:textFontWeight="600"
-                                            android:textSize="12sp"
-                                            tools:targetApi="p" />
-
-
-                                    </LinearLayout>
-
-                                    <TextView
-                                        android:layout_width="match_parent"
-                                        android:layout_height="wrap_content"
-                                        android:layout_marginTop="12dp"
-                                        android:text="This is question subject"
-                                        android:textColor="@color/textColor_1"
-                                        android:textFontWeight="600"
-                                        android:textSize="14sp"
-                                        tools:targetApi="p" />
-
-                                    <TextView
-                                        android:layout_width="match_parent"
-                                        android:layout_height="wrap_content"
-                                        android:layout_marginTop="4dp"
-                                        android:text="@string/demo_ans"
-                                        android:textColor="@color/textColor_1"
-                                        android:textSize="12sp"
-                                        tools:targetApi="p" />
-
-                                    <View
-                                        android:layout_width="match_parent"
-                                        android:layout_height="1dp"
-                                        android:layout_marginTop="8dp"
-                                        android:background="@color/textColor_3" />
-
-                                    <LinearLayout
-                                        android:layout_width="match_parent"
-                                        android:layout_height="wrap_content"
-                                        android:layout_marginTop="6dp"
-                                        android:orientation="horizontal">
-
-                                        <LinearLayout
-                                            android:layout_width="0dp"
-                                            android:layout_height="wrap_content"
-                                            android:layout_weight="1"
-                                            android:orientation="vertical">
-
-                                            <ImageView
-                                                android:layout_width="20dp"
-                                                android:layout_height="20dp"
-                                                android:layout_gravity="center"
-                                                android:src="@drawable/ic_baseline_favorite_border_24" />
-
-                                        </LinearLayout>
-
-
-                                        <View
-                                            android:layout_width="1dp"
-                                            android:layout_height="match_parent"
-                                            android:background="@color/textColor_3" />
-
-                                        <LinearLayout
-                                            android:layout_width="0dp"
-                                            android:layout_height="wrap_content"
-                                            android:layout_weight="1"
-                                            android:orientation="vertical">
-
-                                            <ImageView
-                                                android:layout_width="20dp"
-                                                android:layout_height="20dp"
-                                                android:layout_gravity="center"
-                                                android:src="@drawable/ic_baseline_share_24" />
-
-                                        </LinearLayout>
-
-
-                                    </LinearLayout>
-
-
-                                </LinearLayout>
-
-                            </com.google.android.material.card.MaterialCardView>
-
+                            </LinearLayout>
 
                         </LinearLayout>
 
-                        <LinearLayout
-                            android:id="@+id/videos_layout"
+                        <androidx.recyclerview.widget.RecyclerView
+                            android:id="@+id/questionList"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:orientation="vertical"
-                            android:paddingLeft="16dp"
-                            android:paddingTop="9dp"
-                            android:paddingRight="16dp"
-                            android:paddingBottom="16dp"
-                            android:visibility="gone">
-
-                            <TextView
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:text="This is video part"
-                                android:textColor="@color/textColor_1"
-                                android:textFontWeight="500"
-                                android:textSize="34sp" />
-
-
-                        </LinearLayout>
+                            android:background="@color/video_bg_1" />
 
 
                     </LinearLayout>
@@ -768,23 +194,110 @@
         </RelativeLayout>
 
 
-        <com.google.android.material.floatingactionbutton.FloatingActionButton
-            android:id="@+id/addQuestion"
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/btnPrivateQuestion"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_gravity="end"
-            android:layout_marginEnd="16dp"
-            android:layout_marginBottom="16dp"
-            android:src="@drawable/ic_baseline_add_24"
-            android:tint="@android:color/white"
-            app:fabSize="normal"
-            app:tint="@null"
+            android:layout_marginBottom="10dp"
+            android:backgroundTint="@color/theme_color"
+            android:clickable="true"
+            android:focusable="true"
+            app:cardCornerRadius="6dp"
+            app:layout_constraintBottom_toTopOf="@+id/btnPublicQuestion"
+            app:layout_constraintEnd_toEndOf="@+id/btnPublicQuestion">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:padding="8dp">
+
+                <ImageView
+                    android:layout_width="12sp"
+                    android:layout_height="12sp"
+                    android:src="@drawable/privet_white" />
+
+                <TextView
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:drawableEnd="@drawable/alert_white_question"
+                    android:drawablePadding="4dp"
+                    android:text="@string/private_question"
+                    android:textColor="@color/white"
+                    android:textSize="14sp" />
+            </LinearLayout>
+
+
+        </com.google.android.material.card.MaterialCardView>
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/btnPublicQuestion"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:backgroundTint="@color/color_input_text_background"
+            android:clickable="true"
+            android:focusable="true"
+            app:cardCornerRadius="6dp"
+            app:layout_constraintBottom_toTopOf="@+id/btnAskQuestion"
+            app:layout_constraintEnd_toEndOf="@+id/btnAskQuestion">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:padding="8dp">
+
+                <ImageView
+                    android:layout_width="12sp"
+                    android:layout_height="12sp"
+                    android:src="@drawable/global" />
+
+                <TextView
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:drawableEnd="@drawable/alert_black_question"
+                    android:drawablePadding="4dp"
+                    android:text="@string/public_question"
+                    android:textColor="@color/textColor_primary"
+                    android:textSize="14sp" />
+            </LinearLayout>
+
+
+        </com.google.android.material.card.MaterialCardView>
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/btnAskQuestion"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:contentDescription="fab_content_desc"
+            app:fabSize="mini"
+            app:layout_constraintBottom_toTopOf="@+id/tvAskQuestion"
+            app:layout_constraintEnd_toEndOf="@+id/tvAskQuestion"
+            app:layout_constraintStart_toStartOf="@+id/tvAskQuestion"
+            app:srcCompat="@drawable/ic_baseline_add_24"
+            app:tint="@color/white" />
+
+        <TextView
+            android:id="@+id/tvAskQuestion"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="16dp"
+            android:background="@drawable/profile_edit_text_background_theme"
+            android:paddingStart="10dp"
+            android:paddingTop="4dp"
+            android:paddingEnd="10dp"
+            android:paddingBottom="6dp"
+            android:text="@string/ask_question"
+            android:textColor="@color/white"
+            android:textSize="10sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent" />
 
+
     </androidx.constraintlayout.widget.ConstraintLayout>
-
-
 
 
 </layout>

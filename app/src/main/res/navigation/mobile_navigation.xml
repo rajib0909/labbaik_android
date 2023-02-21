@@ -13,7 +13,7 @@
 
     <fragment
         android:id="@+id/navigation_questions"
-        android:name="com.labbaiik.app.view.fragments.QuestionsFragment"
+        android:name="com.labbaiik.app.view.fragments.question.QuestionsFragment"
         android:label=""
         tools:layout="@layout/fragment_questions" />
 
@@ -82,6 +82,36 @@
         android:name="com.labbaiik.app.view.fragments.home.ConnectFragment"
         android:label=""
         tools:layout="@layout/fragment_connect" />
+
+    <fragment
+        android:id="@+id/navigation_report"
+        android:name="com.labbaiik.app.view.fragments.question.ReportFragment"
+        android:label=""
+        tools:layout="@layout/fragment_report" />
+
+    <fragment
+        android:id="@+id/navigation_report_successful"
+        android:name="com.labbaiik.app.view.fragments.question.ReportSuccessfulFragment"
+        android:label=""
+        tools:layout="@layout/fragment_report" />
+
+    <fragment
+        android:id="@+id/navigation_ask_private_question"
+        android:name="com.labbaiik.app.view.fragments.question.AskPrivateQuestionFragment"
+        android:label=""
+        tools:layout="@layout/fragment_ask_private_question" />
+
+    <fragment
+        android:id="@+id/navigation_ask_public_question"
+        android:name="com.labbaiik.app.view.fragments.question.AskPublicQuestionFragment"
+        android:label=""
+        tools:layout="@layout/fragment_ask_public_question" />
+
+    <fragment
+        android:id="@+id/navigation_ask_question_successful"
+        android:name="com.labbaiik.app.view.fragments.question.AskQuestionConfirmationFragment"
+        android:label=""
+        tools:layout="@layout/fragment_ask_question_confirmation" />
 
 
 </navigation>

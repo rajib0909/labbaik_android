@@ -31,6 +31,7 @@
         <entry key="..\:/Android Project/labbaik_android/app/src/main/res/drawable-night/ic_circle.xml" value="0.247" />
         <entry key="..\:/Android Project/labbaik_android/app/src/main/res/drawable-night/ic_circle_big.xml" value="0.247" />
         <entry key="..\:/Android Project/labbaik_android/app/src/main/res/drawable-night/ic_double_quotation_mark.xml" value="0.276" />
+        <entry key="..\:/Android Project/labbaik_android/app/src/main/res/drawable-v24/input_text_background_ask_question.xml" value="0.235" />
         <entry key="..\:/Android Project/labbaik_android/app/src/main/res/drawable/circle_shape.xml" value="0.2" />
         <entry key="..\:/Android Project/labbaik_android/app/src/main/res/drawable/circle_shape_light.xml" value="0.193" />
         <entry key="..\:/Android Project/labbaik_android/app/src/main/res/drawable/dua_list_background.xml" value="0.3535" />
@@ -46,6 +47,7 @@
         <entry key="..\:/Android Project/labbaik_android/app/src/main/res/drawable/ic_baseline_person.xml" value="0.233" />
         <entry key="..\:/Android Project/labbaik_android/app/src/main/res/drawable/ic_baseline_person_2.xml" value="0.233" />
         <entry key="..\:/Android Project/labbaik_android/app/src/main/res/drawable/ic_baseline_place_24.xml" value="0.304" />
+        <entry key="..\:/Android Project/labbaik_android/app/src/main/res/drawable/ic_baseline_save_24.xml" value="0.235" />
         <entry key="..\:/Android Project/labbaik_android/app/src/main/res/drawable/ic_baseline_share_24.xml" value="0.3535" />
         <entry key="..\:/Android Project/labbaik_android/app/src/main/res/drawable/ic_baseline_video_library_24.xml" value="0.235" />
         <entry key="..\:/Android Project/labbaik_android/app/src/main/res/drawable/ic_camera.xml" value="0.247" />
@@ -56,8 +58,10 @@
         <entry key="..\:/Android Project/labbaik_android/app/src/main/res/drawable/ic_outline_account_circle_24.xml" value="0.233" />
         <entry key="..\:/Android Project/labbaik_android/app/src/main/res/drawable/ic_outline_home_24.xml" value="0.3635" />
         <entry key="..\:/Android Project/labbaik_android/app/src/main/res/drawable/ic_verify.xml" value="0.3635" />
+        <entry key="..\:/Android Project/labbaik_android/app/src/main/res/drawable/input_text_background-question.xml" value="0.235" />
         <entry key="..\:/Android Project/labbaik_android/app/src/main/res/drawable/input_text_background.xml" value="0.233" />
         <entry key="..\:/Android Project/labbaik_android/app/src/main/res/drawable/input_text_background_profile.xml" value="0.304" />
+        <entry key="..\:/Android Project/labbaik_android/app/src/main/res/drawable/input_text_background_question.xml" value="0.235" />
         <entry key="..\:/Android Project/labbaik_android/app/src/main/res/drawable/otp_background.xml" value="0.233" />
         <entry key="..\:/Android Project/labbaik_android/app/src/main/res/drawable/prayer_ttime_bg.xml" value="0.3535" />
         <entry key="..\:/Android Project/labbaik_android/app/src/main/res/drawable/profile_edit_text_background.xml" value="0.3635" />
@@ -78,19 +82,22 @@
         <entry key="..\:/Android Project/labbaik_android/app/src/main/res/layout/activity_login.xml" value="0.5128960943257185" />
         <entry key="..\:/Android Project/labbaik_android/app/src/main/res/layout/activity_main.xml" value="0.2111111111111111" />
         <entry key="..\:/Android Project/labbaik_android/app/src/main/res/layout/activity_mufti_image_set.xml" value="0.8149882903981265" />
-        <entry key="..\:/Android Project/labbaik_android/app/src/main/res/layout/activity_mufti_welcome.xml" value="0.7836363636363637" />
+        <entry key="..\:/Android Project/labbaik_android/app/src/main/res/layout/activity_mufti_welcome.xml" value="0.37970540098199673" />
         <entry key="..\:/Android Project/labbaik_android/app/src/main/res/layout/activity_otp_verification.xml" value="0.6767241379310345" />
         <entry key="..\:/Android Project/labbaik_android/app/src/main/res/layout/activity_sign_up.xml" value="0.26403641881638845" />
         <entry key="..\:/Android Project/labbaik_android/app/src/main/res/layout/activity_sign_up_mufti.xml" value="0.7136363636363636" />
-        <entry key="..\:/Android Project/labbaik_android/app/src/main/res/layout/activity_sign_up_user.xml" value="0.75" />
+        <entry key="..\:/Android Project/labbaik_android/app/src/main/res/layout/activity_sign_up_user.xml" value="0.33" />
         <entry key="..\:/Android Project/labbaik_android/app/src/main/res/layout/activity_splash.xml" value="0.26403641881638845" />
-        <entry key="..\:/Android Project/labbaik_android/app/src/main/res/layout/activity_user_image_set.xml" value="0.7759197324414716" />
+        <entry key="..\:/Android Project/labbaik_android/app/src/main/res/layout/activity_user_image_set.xml" value="0.47314751869476546" />
         <entry key="..\:/Android Project/labbaik_android/app/src/main/res/layout/activity_welcome.xml" value="0.8149882903981265" />
         <entry key="..\:/Android Project/labbaik_android/app/src/main/res/layout/bottom_logo_layout.xml" value="0.8126463700234192" />
         <entry key="..\:/Android Project/labbaik_android/app/src/main/res/layout/dua_list.xml" value="0.33" />
         <entry key="..\:/Android Project/labbaik_android/app/src/main/res/layout/fragment_all_question.xml" value="0.33" />
         <entry key="..\:/Android Project/labbaik_android/app/src/main/res/layout/fragment_answar.xml" value="0.29743589743589743" />
         <entry key="..\:/Android Project/labbaik_android/app/src/main/res/layout/fragment_answer.xml" value="0.33" />
+        <entry key="..\:/Android Project/labbaik_android/app/src/main/res/layout/fragment_ask_private_question.xml" value="0.33" />
+        <entry key="..\:/Android Project/labbaik_android/app/src/main/res/layout/fragment_ask_public_question.xml" value="0.29743589743589743" />
+        <entry key="..\:/Android Project/labbaik_android/app/src/main/res/layout/fragment_ask_question_confirmation.xml" value="0.29743589743589743" />
         <entry key="..\:/Android Project/labbaik_android/app/src/main/res/layout/fragment_calender.xml" value="0.22" />
         <entry key="..\:/Android Project/labbaik_android/app/src/main/res/layout/fragment_connect.xml" value="0.25" />
         <entry key="..\:/Android Project/labbaik_android/app/src/main/res/layout/fragment_correction_request.xml" value="0.33" />
@@ -104,12 +111,15 @@
         <entry key="..\:/Android Project/labbaik_android/app/src/main/res/layout/fragment_prayer_time.xml" value="0.5" />
         <entry key="..\:/Android Project/labbaik_android/app/src/main/res/layout/fragment_profile.xml" value="0.25" />
         <entry key="..\:/Android Project/labbaik_android/app/src/main/res/layout/fragment_questions.xml" value="0.33" />
+        <entry key="..\:/Android Project/labbaik_android/app/src/main/res/layout/fragment_report.xml" value="0.25" />
+        <entry key="..\:/Android Project/labbaik_android/app/src/main/res/layout/fragment_report_successful.xml" value="0.2858974358974359" />
         <entry key="..\:/Android Project/labbaik_android/app/src/main/res/layout/fragment_video_list.xml" value="0.33" />
         <entry key="..\:/Android Project/labbaik_android/app/src/main/res/layout/home_questiond_list.xml" value="0.29743589743589743" />
         <entry key="..\:/Android Project/labbaik_android/app/src/main/res/layout/signup_selection.xml" value="0.855072463768116" />
         <entry key="..\:/Android Project/labbaik_android/app/src/main/res/layout/video_list.xml" value="0.33" />
         <entry key="..\:/Android Project/labbaik_android/app/src/main/res/layout/video_list_grid.xml" value="0.21794871794871795" />
         <entry key="..\:/Android Project/labbaik_android/app/src/main/res/menu/bottom_nav_menu.xml" value="0.21794871794871795" />
+        <entry key="..\:/Android Project/labbaik_android/app/src/main/res/menu/question_list_option_menu.xml" value="0.29743589743589743" />
       </map>
     </option>
   </component>

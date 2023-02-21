@@ -2,8 +2,10 @@ package com.labbaiik.app.adapter;
 
 import android.content.Context;
 import android.view.LayoutInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.PopupMenu;
 
 import androidx.annotation.NonNull;
 import androidx.databinding.DataBindingUtil;
@@ -36,6 +38,7 @@ public class ShowPrimaryQuestionListAdapter extends RecyclerView.Adapter<ShowPri
 
     public interface OnClickQuestionList {
         void onClickQuestion(String data);
+        void onClickReportToMufti(String data);
     }
 
     public void updateDuaList(List<String> allResultList) {
@@ -71,6 +74,34 @@ public class ShowPrimaryQuestionListAdapter extends RecyclerView.Adapter<ShowPri
         }
 
         public void bind(String datum) {
+            binding.optionMenu.setOnClickListener(l->{
+                PopupMenu menu = new PopupMenu(context, binding.optionMenu);
+                menu.inflate(R.menu.question_list_option_menu);
+                //adding click listener
+                menu.setOnMenuItemClickListener(new PopupMenu.OnMenuItemClickListener() {
+                    @Override
+                    public boolean onMenuItemClick(MenuItem item) {
+                        switch (item.getItemId()) {
+                            case R.id.save_this_post:
+                                //handle menu1 click
+                                return true;
+                            case R.id.copy_link:
+                                //handle menu2 click
+                                return true;
+                            case R.id.report_to_mufti_name:
+                                onClickQuestionList.onClickReportToMufti("test");
+                                return true;
+                            case R.id.report_to_labbaiik_team:
+                                //handle menu3 click
+                                return true;
+                            default:
+                                return false;
+                        }
+                    }
+                });
+                //displaying the popup
+                menu.show();
+            });
        //     binding.duaTitle.setText(datum);
 
 //            lessonItemBinding.pushUps.setOnClickListener(l->{

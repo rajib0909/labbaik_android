@@ -127,5 +127,22 @@
     <string name="also_find_us_on">Also find us on</string>
     <string name="watch_videos">Watch videos</string>
     <string name="next_oakto">পরবর্তী ওয়াক্ত:</string>
+    <string name="save_this_post">Save this post</string>
+    <string name="copy_link">Copy Link</string>
+    <string name="report_to_mufti_name">Report to Mufti Name</string>
+    <string name="report_to_labbaiik_team">Report to <b>Labbaiik</b> team</string>
+    <string name="report">Report</string>
+    <string name="please_select_a_problem">Please select a problem</string>
+    <string name="help_us_understand_what_s_happening_with_this_post_how_would_you_describe_it">Help us understand what\'s happening with this post. How would you describe it?</string>
+    <string name="submit">Submit</string>
+    <string name="your_report_has_been_received_stay_with_labbaiik">Your report has been received. Stay with <font fgcolor='#00A99D'><u><b>Labbaiik</b></u> </font></string>
+    <string name="private_question_text">If you feel that the wider Muslim Ummah could benefit from any of your questions, we encourage you to keep your question public for their benefit. Yes, you should make the question private only if the question involves your personal information and special secrets, which you are not interested in sharing with anyone else. The <font fgcolor='#00A99D'><b>Labbaiik team</b> </font> believes in protecting everyone\'s privacy and dignity.</string>
+    <string name="public_question_text">If you feel that the larger Muslim Ummah could benefit from any of your questions, we encourage you to keep your question public for their benefit.</string>
+    <string name="select_the_category_of_the_question">Select the category of the question</string>
+    <string name="tap_to_select_that_match_your_category">Tap to select that match your category</string>
+    <string name="write_your_question_in_details">Write your question in details...</string>
+    <string name="submit_to_answer">Submit to answer</string>
+    <string name="donate_here_to_improve_the_app">Donate here to improve the app</string>
+    <string name="ask_question_confirmation"><b>Thank you for asking an excellent question.</b>\nYour query has been handed over to our experienced mufti panel. Very soon we will try to give you a rich answer to your question based on the Qur\'an and Hadith, insha\'Allah.\n\n Hope to stay with <font fgcolor='#00A99D'><b><u>Labbaiik.</u></b> </font></string>
 </resources>
 

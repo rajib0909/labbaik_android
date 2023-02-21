@@ -1,4 +1,4 @@
-package com.labbaiik.app.view.fragments;
+package com.labbaiik.app.view.fragments.question;
 
 import android.content.Intent;
 import android.content.res.ColorStateList;
@@ -7,6 +7,8 @@ import android.os.Bundle;
 import androidx.core.content.ContextCompat;
 import androidx.databinding.DataBindingUtil;
 import androidx.fragment.app.Fragment;
+import androidx.navigation.NavController;
+import androidx.navigation.Navigation;
 import androidx.recyclerview.widget.LinearLayoutManager;
 
 import android.view.LayoutInflater;
@@ -31,13 +33,13 @@ public class QuestionsFragment extends Fragment {
     FragmentQuestionsBinding questionsBinding;
     private ShowPrimaryQuestionListAdapter adapter;
     private List<String> questionArray;
-    private boolean askQuestion= false;
+    private boolean askQuestion = false;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        questionsBinding = DataBindingUtil.inflate(inflater,R.layout.fragment_questions, container, false);
+        questionsBinding = DataBindingUtil.inflate(inflater, R.layout.fragment_questions, container, false);
 
 //        questionsBinding.btnLogin.setOnClickListener(l->startActivity( new Intent(getContext(), LoginActivity.class)));
 //
@@ -80,23 +82,45 @@ public class QuestionsFragment extends Fragment {
         questionsBinding.btnPrivateQuestion.setVisibility(View.GONE);
         questionsBinding.btnPublicQuestion.setVisibility(View.GONE);
 
-        questionsBinding.btnAskQuestion.setOnClickListener(l->{
-            if (!askQuestion){
+        questionsBinding.btnAskQuestion.setOnClickListener(l -> {
+            if (!askQuestion) {
                 questionsBinding.btnPrivateQuestion.setVisibility(View.VISIBLE);
                 questionsBinding.btnPublicQuestion.setVisibility(View.VISIBLE);
                 questionsBinding.tvAskQuestion.setVisibility(View.INVISIBLE);
                 askQuestion = true;
-                questionsBinding.btnAskQuestion.setBackgroundTintList(ColorStateList.valueOf(ContextCompat.getColor(getContext(),R.color.color_red_day_night)));
+                questionsBinding.btnAskQuestion.setBackgroundTintList(ColorStateList.valueOf(ContextCompat.getColor(getContext(), R.color.color_red_day_night)));
                 questionsBinding.btnAskQuestion.setRotation(45);
-            }else {
+            } else {
                 questionsBinding.btnPrivateQuestion.setVisibility(View.GONE);
                 questionsBinding.btnPublicQuestion.setVisibility(View.GONE);
                 questionsBinding.tvAskQuestion.setVisibility(View.VISIBLE);
-                questionsBinding.btnAskQuestion.setBackgroundTintList(ColorStateList.valueOf(ContextCompat.getColor(getContext(),R.color.theme_color)));
+                questionsBinding.btnAskQuestion.setBackgroundTintList(ColorStateList.valueOf(ContextCompat.getColor(getContext(), R.color.theme_color)));
                 questionsBinding.btnAskQuestion.setRotation(0);
                 askQuestion = false;
             }
 
+        });
+
+        adapter.setOnClickQuestion(new ShowPrimaryQuestionListAdapter.OnClickQuestionList() {
+            @Override
+            public void onClickQuestion(String data) {
+
+            }
+
+            @Override
+            public void onClickReportToMufti(String data) {
+                NavController navController = Navigation.findNavController(getActivity(), R.id.nav_host_fragment);
+                navController.navigate(R.id.navigation_report);
+            }
+        });
+
+        questionsBinding.btnPrivateQuestion.setOnClickListener(l -> {
+            NavController navController = Navigation.findNavController(getActivity(), R.id.nav_host_fragment);
+            navController.navigate(R.id.navigation_ask_private_question);
+        });
+        questionsBinding.btnPublicQuestion.setOnClickListener(l -> {
+            NavController navController = Navigation.findNavController(getActivity(), R.id.nav_host_fragment);
+            navController.navigate(R.id.navigation_ask_public_question);
         });
 
 

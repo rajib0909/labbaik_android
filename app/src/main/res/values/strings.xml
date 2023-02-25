@@ -144,5 +144,19 @@
     <string name="submit_to_answer">Submit to answer</string>
     <string name="donate_here_to_improve_the_app">Donate here to improve the app</string>
     <string name="ask_question_confirmation"><b>Thank you for asking an excellent question.</b>\nYour query has been handed over to our experienced mufti panel. Very soon we will try to give you a rich answer to your question based on the Qur\'an and Hadith, insha\'Allah.\n\n Hope to stay with <font fgcolor='#00A99D'><b><u>Labbaiik.</u></b> </font></string>
+    <string name="more">More</string>
+    <string name="shortcuts">Shortcuts</string>
+    <string name="theme">Theme</string>
+    <string name="location">Location</string>
+    <string name="general_settings">General settings</string>
+    <string name="terms_condition"><![CDATA[Terms & Condition]]></string>
+    <string name="privacy_policy">Privacy policy</string>
+    <string name="feedback">Feedback</string>
+    <string name="faq">FAQ</string>
+    <string name="light">Light</string>
+    <string name="dark">Dark</string>
+    <string name="choose_a_theme">Choose a theme</string>
+    <string name="we_highly_recommended_you_to_use_automatic_mode">We highly recommended you to use automatic mode</string>
+    <string name="location_text">Updating your exact location is very important to determine the time of prayer. Because, the prayer schedule will be displayed in this app according to your location.\n\nThe location will auto update in your mobile\'s GPS system. However, if it seems wrong, update your location.</string>
 </resources>
 

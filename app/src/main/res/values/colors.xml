@@ -59,4 +59,6 @@
     <color name="tv_bg_3">#FFFACB</color>
     <color name="prayer_time_bg_1">#89D4CE</color>
     <color name="video_bg_1">#D9DEE1</color>
+    <color name="theme_button_color">#9FADBE</color>
+    <color name="theme_button_color_active">#F2F7F9</color>
 </resources>

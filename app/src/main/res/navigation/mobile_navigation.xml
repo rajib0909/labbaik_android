@@ -113,5 +113,23 @@
         android:label=""
         tools:layout="@layout/fragment_ask_question_confirmation" />
 
+    <fragment
+        android:id="@+id/navigation_more"
+        android:name="com.labbaiik.app.view.fragments.more.MoreFragment"
+        android:label=""
+        tools:layout="@layout/fragment_more" />
+
+    <fragment
+        android:id="@+id/navigation_theme"
+        android:name="com.labbaiik.app.view.fragments.more.ThemeFragment"
+        android:label=""
+        tools:layout="@layout/fragment_more" />
+
+    <fragment
+        android:id="@+id/navigation_location"
+        android:name="com.labbaiik.app.view.fragments.more.LocationFragment"
+        android:label=""
+        tools:layout="@layout/fragment_location" />
+
 
 </navigation>

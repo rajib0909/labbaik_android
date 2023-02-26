@@ -207,6 +207,7 @@
             </com.google.android.material.textfield.TextInputLayout>
 
             <com.google.android.material.card.MaterialCardView
+                android:id="@+id/btnDonate"
                 android:clickable="true"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"

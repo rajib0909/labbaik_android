@@ -20,6 +20,7 @@ import android.widget.Toast;
 import com.labbaiik.app.R;
 import com.labbaiik.app.databinding.FragmentLocationBinding;
 import com.labbaiik.app.utill.GPSTracker;
+import com.labbaiik.app.view.MainActivity;
 
 import java.io.IOException;
 import java.util.List;
@@ -92,5 +93,17 @@ public class LocationFragment extends Fragment {
                 //getLocationUpdates();
             }
         }
+    }
+
+    @Override
+    public void onStart() {
+        super.onStart();
+        MainActivity.hideBottomNav();
+    }
+
+    @Override
+    public void onStop() {
+        super.onStop();
+        MainActivity.showBottomNav();
     }
 }

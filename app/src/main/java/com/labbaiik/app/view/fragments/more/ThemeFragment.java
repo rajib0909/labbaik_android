@@ -14,6 +14,7 @@ import android.widget.RadioGroup;
 
 import com.labbaiik.app.R;
 import com.labbaiik.app.databinding.FragmentThemeBinding;
+import com.labbaiik.app.view.MainActivity;
 
 public class ThemeFragment extends Fragment {
     FragmentThemeBinding binding;
@@ -58,5 +59,17 @@ public class ThemeFragment extends Fragment {
 
 
         return binding.getRoot();
+    }
+
+    @Override
+    public void onStart() {
+        super.onStart();
+        MainActivity.hideBottomNav();
+    }
+
+    @Override
+    public void onStop() {
+        super.onStop();
+        MainActivity.showBottomNav();
     }
 }

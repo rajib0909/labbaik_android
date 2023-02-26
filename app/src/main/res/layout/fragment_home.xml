@@ -538,6 +538,7 @@
                         android:orientation="vertical">
 
                         <com.google.android.material.card.MaterialCardView
+                            android:id="@+id/btnDonate"
                             android:layout_width="55dp"
                             android:layout_height="55dp"
                             android:layout_margin="8dp"
@@ -767,6 +768,7 @@
                         android:orientation="vertical">
 
                         <com.google.android.material.card.MaterialCardView
+                            android:id="@+id/btnSettings"
                             android:layout_width="55dp"
                             android:layout_height="55dp"
                             android:layout_margin="8dp"

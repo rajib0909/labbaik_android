@@ -48,6 +48,16 @@ public class HomeFragment extends Fragment {
             navController.navigate(R.id.navigation_connection);
         });
 
+        binding.btnDonate.setOnClickListener(l -> {
+            NavController navController = Navigation.findNavController(getActivity(), R.id.nav_host_fragment);
+            navController.navigate(R.id.navigation_donate);
+        });
+
+        binding.btnSettings.setOnClickListener(l -> {
+            NavController navController = Navigation.findNavController(getActivity(), R.id.nav_host_fragment);
+            navController.navigate(R.id.navigation_general_settings);
+        });
+
 
         timer();
         return binding.getRoot();

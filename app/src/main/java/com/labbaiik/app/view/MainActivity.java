@@ -9,7 +9,9 @@ import androidx.navigation.ui.NavigationUI;
 
 import android.annotation.SuppressLint;
 import android.os.Bundle;
+import android.view.View;
 
+import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.labbaiik.app.R;
 import com.labbaiik.app.databinding.ActivityMainBinding;
 
@@ -17,7 +19,7 @@ public class MainActivity extends AppCompatActivity {
     @SuppressLint("StaticFieldLeak")
     static NavController navController;
     ActivityMainBinding mainBinding;
-
+    static BottomNavigationView navigationView;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -31,6 +33,8 @@ public class MainActivity extends AppCompatActivity {
         catch (NullPointerException e) {
         }
 
+        navigationView = mainBinding.navView;
+
         // Passing each menu ID as a set of Ids because each
         // menu should be considered as top level destinations.
         AppBarConfiguration appBarConfiguration = new AppBarConfiguration.Builder(
@@ -41,5 +45,20 @@ public class MainActivity extends AppCompatActivity {
         NavigationUI.setupWithNavController(mainBinding.navView, navController);
 
 
+    }
+
+    /**
+     * Hide bottom Navigation
+     */
+    public static void hideBottomNav() {
+        navigationView.setVisibility(View.GONE);
+    }
+
+
+    /**
+     * Show bottom Navigation
+     */
+    public static void showBottomNav() {
+        navigationView.setVisibility(View.VISIBLE);
     }
 }

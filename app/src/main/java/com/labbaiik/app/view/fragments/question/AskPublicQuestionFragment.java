@@ -13,6 +13,7 @@ import android.view.ViewGroup;
 
 import com.labbaiik.app.R;
 import com.labbaiik.app.databinding.FragmentAskPublicQuestionBinding;
+import com.labbaiik.app.view.MainActivity;
 
 
 public class AskPublicQuestionFragment extends Fragment {
@@ -31,6 +32,25 @@ public class AskPublicQuestionFragment extends Fragment {
             navController.navigate(R.id.navigation_ask_question_successful);
         });
 
+
+        binding.btnDonate.setOnClickListener(l -> {
+            NavController navController = Navigation.findNavController(getActivity(), R.id.nav_host_fragment);
+            navController.navigate(R.id.navigation_donate);
+        });
+
         return binding.getRoot();
+    }
+
+
+    @Override
+    public void onStart() {
+        super.onStart();
+        MainActivity.hideBottomNav();
+    }
+
+    @Override
+    public void onStop() {
+        super.onStop();
+        MainActivity.showBottomNav();
     }
 }

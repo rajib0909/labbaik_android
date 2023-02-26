@@ -35,6 +35,26 @@ public class MoreFragment extends Fragment {
             navController.navigate(R.id.navigation_location);
         });
 
+        binding.btnGeneralSettings.setOnClickListener(l -> {
+            NavController navController = Navigation.findNavController(getActivity(), R.id.nav_host_fragment);
+            navController.navigate(R.id.navigation_general_settings);
+        });
+
+        binding.btnFeedback.setOnClickListener(l -> {
+            NavController navController = Navigation.findNavController(getActivity(), R.id.nav_host_fragment);
+            navController.navigate(R.id.navigation_feedback);
+        });
+
+        binding.btnFaq.setOnClickListener(l -> {
+            NavController navController = Navigation.findNavController(getActivity(), R.id.nav_host_fragment);
+            navController.navigate(R.id.navigation_faq);
+        });
+
+        binding.btnDonate.setOnClickListener(l -> {
+            NavController navController = Navigation.findNavController(getActivity(), R.id.nav_host_fragment);
+            navController.navigate(R.id.navigation_donate);
+        });
+
         return binding.getRoot();
     }
 }

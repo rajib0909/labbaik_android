@@ -11,6 +11,7 @@ import android.view.ViewGroup;
 
 import com.labbaiik.app.R;
 import com.labbaiik.app.databinding.FragmentPendingQuestionBinding;
+import com.labbaiik.app.view.MainActivity;
 
 
 public class PendingQuestionFragment extends Fragment {
@@ -24,5 +25,18 @@ public class PendingQuestionFragment extends Fragment {
         binding.btnBack.setOnClickListener(l -> getActivity().onBackPressed());
 
         return binding.getRoot();
+    }
+
+
+    @Override
+    public void onStart() {
+        super.onStart();
+        MainActivity.hideBottomNav();
+    }
+
+    @Override
+    public void onStop() {
+        super.onStop();
+        MainActivity.showBottomNav();
     }
 }

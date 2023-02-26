@@ -158,5 +158,29 @@
     <string name="choose_a_theme">Choose a theme</string>
     <string name="we_highly_recommended_you_to_use_automatic_mode">We highly recommended you to use automatic mode</string>
     <string name="location_text">Updating your exact location is very important to determine the time of prayer. Because, the prayer schedule will be displayed in this app according to your location.\n\nThe location will auto update in your mobile\'s GPS system. However, if it seems wrong, update your location.</string>
+    <string name="theme_settings">Theme settings</string>
+    <string name="change_language">Change language</string>
+    <string name="location_settings">Location Settings</string>
+    <string name="app_notification">App notification</string>
+    <string name="prayer_reminder">Prayer reminder</string>
+    <string name="contact_us">Contact us</string>
+    <string name="choose_a_language">Choose a language</string>
+    <string name="bangla">বাংলা</string>
+    <string name="english">English</string>
+    <string name="feedback_text">It is especially important for us to know the user\'s feedback for the overall improvement of this new innovative idea of ​​ours. Please let us know in detail what features you expect from us in the future and what we need to focus more on.</string>
+    <string name="feedback_type">Feedback type</string>
+    <string name="type_your_feedback_here">Type your feedback here...</string>
+    <string name="cancel">Cancel</string>
+    <string name="help_us_continue_the_development_of_this_app_donate_here_as_much_as_you_can_to_keep_the_app_running_in_the_future_which_will_be_added_to_your_amalnama_as_sadkaya_jaria">Help us continue the development of this app. Donate here as much as you can to keep the app running in the future. Which will be added to your amalnama as sadkaya jaria.</string>
+    <string name="why_donate_to_labbaiik">Why donate to Labbaiik?</string>
+    <string name="labbaiik_s_future_plans">Labbaiik\'s future plans</string>
+    <string name="why_donate_details">Help us continue the development of this app. Donate here as much as you can to keep the app running in the future. Which will be added to your amalnama as sadkaya jaria.</string>
+    <string name="choose_the_sending_method">Choose the sending method:</string>
+    <string name="bkash_details">Account Number: <b>+880 1957441636</b>\nAccount type:<b> Personal</b>\nMethod : <b>Send money</b></string>
+    <string name="bkash_hints">01. This is a personal <b>Bkash</b> account number.\n02. Copy the number.\n03. Go to the <b>send money</b> option of your Bkash account.\n04. Enter reference <font fgcolor='#00A99D'><b>Labbaiik.</b> </font>\n05. Confirm us by filling this form.</string>
+    <string name="sender_name">Sender Name :</string>
+    <string name="mobile_no">Mobile No :</string>
+    <string name="amount">Amount :</string>
+    <string name="done">Done</string>
 </resources>
 

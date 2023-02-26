@@ -15,6 +15,7 @@ import android.view.ViewGroup;
 import com.labbaiik.app.R;
 import com.labbaiik.app.adapter.ShowDuaListAdapter;
 import com.labbaiik.app.databinding.FragmentDuaBinding;
+import com.labbaiik.app.view.MainActivity;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -61,5 +62,17 @@ public class DuaFragment extends Fragment {
 
 
         return binding.getRoot();
+    }
+
+    @Override
+    public void onStart() {
+        super.onStart();
+        MainActivity.hideBottomNav();
+    }
+
+    @Override
+    public void onStop() {
+        super.onStop();
+        MainActivity.showBottomNav();
     }
 }

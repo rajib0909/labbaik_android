@@ -69,8 +69,9 @@
 
             <ImageView
                 android:id="@+id/optionMenu"
-                android:layout_width="12sp"
-                android:layout_height="12sp"
+                android:padding="8dp"
+                android:layout_width="28dp"
+                android:layout_height="28dp"
                 android:layout_alignParentEnd="true"
                 android:layout_centerVertical="true"
                 android:layout_gravity="end"

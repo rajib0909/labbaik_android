@@ -11,6 +11,7 @@ import android.view.ViewGroup;
 
 import com.labbaiik.app.R;
 import com.labbaiik.app.databinding.FragmentDuaDetailsBinding;
+import com.labbaiik.app.view.MainActivity;
 
 public class DuaDetailsFragment extends Fragment {
 
@@ -28,5 +29,17 @@ public class DuaDetailsFragment extends Fragment {
 
 
         return binding.getRoot();
+    }
+
+    @Override
+    public void onStart() {
+        super.onStart();
+        MainActivity.hideBottomNav();
+    }
+
+    @Override
+    public void onStop() {
+        super.onStop();
+        MainActivity.showBottomNav();
     }
 }

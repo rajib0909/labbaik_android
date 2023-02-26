@@ -13,6 +13,7 @@ import android.view.ViewGroup;
 
 import com.labbaiik.app.R;
 import com.labbaiik.app.databinding.FragmentAskQuestionConfirmationBinding;
+import com.labbaiik.app.view.MainActivity;
 
 public class AskQuestionConfirmationFragment extends Fragment {
     FragmentAskQuestionConfirmationBinding binding;
@@ -28,5 +29,18 @@ public class AskQuestionConfirmationFragment extends Fragment {
 
         // Inflate the layout for this fragment
         return binding.getRoot();
+    }
+
+
+    @Override
+    public void onStart() {
+        super.onStart();
+        MainActivity.hideBottomNav();
+    }
+
+    @Override
+    public void onStop() {
+        super.onStop();
+        MainActivity.showBottomNav();
     }
 }

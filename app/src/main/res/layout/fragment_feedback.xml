@@ -6,7 +6,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="@color/background_color"
-        tools:context=".view.fragments.question.AskPrivateQuestionFragment">
+        tools:context=".view.fragments.more.FeedbackFragment">
 
         <androidx.appcompat.widget.Toolbar
             android:id="@+id/toolbar"
@@ -27,7 +27,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:text="@string/private_question"
+                android:text="@string/feedback"
                 android:textColor="@color/white"
                 android:textSize="16sp"
                 android:textStyle="bold" />
@@ -65,7 +65,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_toEndOf="@+id/alert"
-                        android:text="@string/private_question_text"
+                        android:text="@string/feedback_text"
                         android:textColor="@color/textColor_primary"
                         android:textSize="12sp" />
                 </RelativeLayout>
@@ -74,7 +74,85 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="3dp"
-                    android:layout_marginTop="15dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginRight="3dp"
+                    android:elevation="3dp"
+                    app:cardCornerRadius="10dp">
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/label_name"
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/input_text_background_question"
+                        app:boxCornerRadiusBottomEnd="10dp"
+                        app:boxCornerRadiusBottomStart="10dp"
+                        app:boxCornerRadiusTopEnd="10dp"
+                        app:boxCornerRadiusTopStart="10dp"
+                        app:hintEnabled="false">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/et_name"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/input_text_background"
+                            android:drawableStart="@drawable/fathers_name_profile"
+                            android:drawablePadding="8dp"
+                            android:hint="@string/name"
+                            android:inputType="text"
+                            android:maxLines="1"
+                            android:textColor="@color/input_text_color"
+                            android:textColorHint="@color/text_hint_color"
+                            android:textSize="14sp" />
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                </com.google.android.material.card.MaterialCardView>
+
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="3dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginRight="3dp"
+                    android:elevation="3dp"
+                    app:cardCornerRadius="10dp">
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/label_contact_number"
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/input_text_background_question"
+                        app:boxCornerRadiusBottomEnd="10dp"
+                        app:boxCornerRadiusBottomStart="10dp"
+                        app:boxCornerRadiusTopEnd="10dp"
+                        app:boxCornerRadiusTopStart="10dp"
+                        app:hintEnabled="false">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/et_contact_number"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/input_text_background"
+                            android:drawableStart="@drawable/call"
+                            android:drawablePadding="8dp"
+                            android:hint="@string/active_contact_number"
+                            android:inputType="number"
+                            android:maxLines="1"
+                            android:textColor="@color/input_text_color"
+                            android:textColorHint="@color/text_hint_color"
+                            android:textSize="14sp" />
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                </com.google.android.material.card.MaterialCardView>
+
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="3dp"
+                    android:layout_marginTop="10dp"
                     android:layout_marginRight="3dp"
                     android:elevation="3dp"
                     app:cardCornerRadius="10dp">
@@ -95,9 +173,9 @@
                             android:id="@+id/spinner_gender"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:drawableStart="@drawable/cetagory"
+                            android:drawableStart="@drawable/feedback"
                             android:drawablePadding="8dp"
-                            android:hint="@string/select_the_category_of_the_question"
+                            android:hint="@string/feedback_type"
                             android:inputType="none"
                             android:textColor="@color/input_text_color"
                             android:textColorHint="@color/text_hint_color"
@@ -107,146 +185,63 @@
 
                 </com.google.android.material.card.MaterialCardView>
 
-                <com.google.android.material.card.MaterialCardView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="3dp"
-                    android:layout_marginTop="15dp"
-                    android:layout_marginRight="3dp"
-                    android:backgroundTint="@color/color_input_text_background"
-                    android:elevation="3dp"
-                    app:cardCornerRadius="10dp">
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:orientation="vertical"
-                        android:padding="10dp">
-
-                        <TextView
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:drawableStart="@drawable/tag"
-                            android:drawablePadding="8dp"
-                            android:text="@string/tap_to_select_that_match_your_category"
-                            android:textColor="@color/textColor_primary"
-                            android:textSize="12sp" />
-
-                        <com.google.android.material.chip.ChipGroup
-                            android:id="@+id/match_category"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_marginTop="4dp"
-                            app:singleSelection="false">
-
-                            <com.google.android.material.chip.Chip
-                                style="@style/Widget.MaterialComponents.Chip.Filter"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:text="জানাযার নামায"
-                                android:textColor="@color/textColor_primary"
-                                android:textSize="12sp" />
-
-                            <com.google.android.material.chip.Chip
-                                style="@style/Widget.MaterialComponents.Chip.Filter"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:text="বিতরের নামায"
-                                android:textColor="@color/textColor_primary"
-                                android:textSize="12sp" />
-
-                            <com.google.android.material.chip.Chip
-                                style="@style/Widget.MaterialComponents.Chip.Filter"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:text="জানাযার নামায"
-                                android:textColor="@color/textColor_primary"
-                                android:textSize="12sp" />
-
-                            <com.google.android.material.chip.Chip
-                                style="@style/Widget.MaterialComponents.Chip.Filter"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:text="বিতরের নামায"
-                                android:textColor="@color/textColor_primary"
-                                android:textSize="12sp" />
-
-
-                        </com.google.android.material.chip.ChipGroup>
-
-                    </LinearLayout>
-                </com.google.android.material.card.MaterialCardView>
-
-
                 <com.google.android.material.textfield.TextInputLayout
                     android:id="@+id/label_report"
                     style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                     android:layout_width="match_parent"
                     android:layout_height="150dp"
-                    android:layout_marginTop="15dp"
+                    android:layout_marginLeft="3dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginRight="3dp"
                     android:hint=""
-                    app:boxCornerRadiusBottomEnd="6dp"
-                    app:boxCornerRadiusBottomStart="6dp"
-                    app:boxCornerRadiusTopEnd="6dp"
-                    app:boxCornerRadiusTopStart="6dp"
+                    app:boxCornerRadiusBottomEnd="10dp"
+                    app:boxCornerRadiusBottomStart="10dp"
+                    app:boxCornerRadiusTopEnd="10dp"
+                    app:boxCornerRadiusTopStart="10dp"
                     app:boxStrokeColor="@color/white"
                     app:hintEnabled="false">
 
                     <com.google.android.material.textfield.TextInputEditText
-                        android:id="@+id/et_report"
+                        android:id="@+id/et_feedback"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:background="@drawable/input_text_background_profile"
+                        android:background="@drawable/input_text_background_question"
                         android:gravity="start"
-                        android:hint="@string/write_your_question_in_details"
+                        android:hint="@string/type_your_feedback_here"
                         android:inputType="textMultiLine"
-                        android:textColor="@color/input_text_color_profile"
+                        android:textColor="@color/input_text_color"
                         android:textColorHint="@color/text_hint_color"
                         android:textSize="12sp" />
 
                 </com.google.android.material.textfield.TextInputLayout>
 
-                <com.google.android.material.card.MaterialCardView
-                    android:id="@+id/btnDonate"
-                    android:clickable="true"
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btn_submit"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginLeft="3dp"
-                    android:layout_marginTop="15dp"
-                    android:layout_marginRight="3dp"
-                    android:backgroundTint="@color/color_input_text_background"
-                    android:elevation="3dp"
-                    app:cardCornerRadius="10dp">
-
-                    <TextView
-                        android:layout_margin="10dp"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:drawableStart="@drawable/donate"
-                        android:drawablePadding="8dp"
-                        android:text="@string/donate_here_to_improve_the_app"
-                        android:drawableEnd="@drawable/alert_black"
-                        android:textColor="@color/textColor_primary"
-                        android:textSize="12sp" />
-
-                </com.google.android.material.card.MaterialCardView>
-
-
-
-                <com.google.android.material.button.MaterialButton
-                    android:id="@+id/btn_submit_to_answer"
-                    android:layout_width="200dp"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:layout_marginTop="30dp"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="40dp"
+                    android:layout_marginEnd="20dp"
                     android:backgroundTint="@color/primary_button_color"
-                    android:padding="8dp"
-                    android:textAllCaps="false"
-                    android:text="@string/submit_to_answer"
+                    android:padding="10dp"
+                    android:text="@string/submit"
                     android:textColor="@color/white"
                     android:textFontWeight="600"
                     android:textSize="14sp"
-                    app:cornerRadius="10dp" />
+                    app:cornerRadius="30dp" />
+
+
+                <TextView
+                    android:id="@+id/btn_Cancel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="4dp"
+                    android:layout_marginBottom="150dp"
+                    android:text="@string/cancel"
+                    android:textColor="@color/textColor_primary"
+                    android:textSize="12sp"
+                    android:textStyle="bold" />
 
 
             </LinearLayout>

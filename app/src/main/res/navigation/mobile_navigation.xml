@@ -131,5 +131,35 @@
         android:label=""
         tools:layout="@layout/fragment_location" />
 
+    <fragment
+        android:id="@+id/navigation_general_settings"
+        android:name="com.labbaiik.app.view.fragments.more.GeneralSettingsFragment"
+        android:label=""
+        tools:layout="@layout/fragment_general_settings" />
+
+    <fragment
+        android:id="@+id/navigation_change_language"
+        android:name="com.labbaiik.app.view.fragments.more.ChangeLanguageFragment"
+        android:label=""
+        tools:layout="@layout/fragment_change_language" />
+
+    <fragment
+        android:id="@+id/navigation_feedback"
+        android:name="com.labbaiik.app.view.fragments.more.FeedbackFragment"
+        android:label=""
+        tools:layout="@layout/fragment_feedback" />
+
+    <fragment
+        android:id="@+id/navigation_faq"
+        android:name="com.labbaiik.app.view.fragments.more.FaqFragment"
+        android:label=""
+        tools:layout="@layout/fragment_faq" />
+
+    <fragment
+        android:id="@+id/navigation_donate"
+        android:name="com.labbaiik.app.view.fragments.more.DonateFragment"
+        android:label=""
+        tools:layout="@layout/fragment_donate" />
+
 
 </navigation>

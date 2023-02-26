@@ -11,6 +11,7 @@ import android.view.ViewGroup;
 
 import com.labbaiik.app.R;
 import com.labbaiik.app.databinding.FragmentAnswerBinding;
+import com.labbaiik.app.view.MainActivity;
 
 
 public class AnswerFragment extends Fragment {
@@ -25,5 +26,18 @@ public class AnswerFragment extends Fragment {
         binding.btnBack.setOnClickListener(l-> getActivity().onBackPressed());
 
         return binding.getRoot();
+    }
+
+
+    @Override
+    public void onStart() {
+        super.onStart();
+        MainActivity.hideBottomNav();
+    }
+
+    @Override
+    public void onStop() {
+        super.onStop();
+        MainActivity.showBottomNav();
     }
 }

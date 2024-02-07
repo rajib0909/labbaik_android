@@ -7,6 +7,8 @@ import android.os.Bundle;
 import androidx.core.content.ContextCompat;
 import androidx.databinding.DataBindingUtil;
 import androidx.fragment.app.Fragment;
+import androidx.lifecycle.MutableLiveData;
+import androidx.lifecycle.ViewModelProviders;
 import androidx.navigation.NavController;
 import androidx.navigation.Navigation;
 import androidx.recyclerview.widget.LinearLayoutManager;
@@ -15,7 +17,9 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.RadioGroup;
+import android.widget.Toast;
 
+import com.bumptech.glide.Glide;
 import com.labbaiik.app.R;
 import com.labbaiik.app.adapter.ShowDuaListAdapter;
 import com.labbaiik.app.adapter.ShowPrimaryQuestionListAdapter;
@@ -23,8 +27,10 @@ import com.labbaiik.app.databinding.FragmentQuestionsBinding;
 import com.labbaiik.app.view.LoginActivity;
 import com.labbaiik.app.view.MainActivity;
 import com.labbaiik.app.view.SplashActivity;
+import com.labbaiik.app.viewModel.ViewModel;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 
 
@@ -32,14 +38,15 @@ public class QuestionsFragment extends Fragment {
 
     FragmentQuestionsBinding questionsBinding;
     private ShowPrimaryQuestionListAdapter adapter;
-    private List<String> questionArray;
     private boolean askQuestion = false;
+    private ViewModel viewModel;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         questionsBinding = DataBindingUtil.inflate(inflater, R.layout.fragment_questions, container, false);
+        viewModel = ViewModelProviders.of(this).get(ViewModel.class);
 
 //        questionsBinding.btnLogin.setOnClickListener(l->startActivity( new Intent(getContext(), LoginActivity.class)));
 //
@@ -58,26 +65,13 @@ public class QuestionsFragment extends Fragment {
 //            }
 //        });
 
-        questionArray = new ArrayList<>();
-        questionArray.add("সেভকৃত দু‘আ");
-        questionArray.add("ইমান ও আকাইদ");
-        questionArray.add("পোষাক-পরিচ্ছদ");
-        questionArray.add("খাবার-দাবার");
-        questionArray.add("খাবার-দাবার");
-        questionArray.add("খাবার-দাবার");
-        questionArray.add("খাবার-দাবার");
-        questionArray.add("খাবার-দাবার");
-        questionArray.add("সেভকৃত দু‘আ");
-        questionArray.add("ইমান ও আকাইদ");
-        questionArray.add("পোষাক-পরিচ্ছদ");
-        questionArray.add("খাবার-দাবার");
+        viewModel.getAllQuestion();
+        observerAllQuestionsViewModel();
+        questionsBinding.loading.setVisibility(View.VISIBLE);
 
         adapter = new ShowPrimaryQuestionListAdapter(new ArrayList<>(), getContext());
         LinearLayoutManager layoutManager = new LinearLayoutManager(getContext());
         questionsBinding.questionList.setLayoutManager(layoutManager);
-        questionsBinding.questionList.setAdapter(adapter);
-        adapter.updateDuaList(questionArray);
-        adapter.notifyDataSetChanged();
 
         questionsBinding.btnPrivateQuestion.setVisibility(View.GONE);
         questionsBinding.btnPublicQuestion.setVisibility(View.GONE);
@@ -125,5 +119,52 @@ public class QuestionsFragment extends Fragment {
 
 
         return questionsBinding.getRoot();
+    }
+
+    private void observerAllQuestionsViewModel() {
+        viewModel.fetchAllQuestionMutableLiveData.observe(
+                getActivity(),
+                allQuestion -> {
+                    //isLoad = true;
+                    if (allQuestion != null) {
+                        if (allQuestion.getData().get(0).getSuccess()) {
+                            questionsBinding.questionList.setAdapter(adapter);
+                            adapter.updateDuaList(allQuestion.getData().get(0).getQuestion());
+                            adapter.notifyDataSetChanged();
+                            questionsBinding.loading.setVisibility(View.GONE);
+                        }
+
+                        viewModel.fetchAllQuestionMutableLiveData = new MutableLiveData<>();
+
+                    }
+
+                }
+        );
+        viewModel.fetchAllQuestionLoadError.observe(
+                getViewLifecycleOwner(), isError -> {
+                    if (isError != null) {
+                        if (isError) {
+                            Toast.makeText(getContext(), "Something went wrong", Toast.LENGTH_SHORT).show();
+                            questionsBinding.loading.setVisibility(View.GONE);
+                        }
+                        viewModel.fetchAllQuestionLoadError = new MutableLiveData<>();
+                    }
+                }
+        );
+
+//        viewModel.noInternet.observe(
+//                getViewLifecycleOwner(), isError -> {
+//                    if (isError != null) {
+//                        if (isError) {
+//                            Glide.with(getContext()).load(R.drawable.no_internet_1).into(homeBinding.noInternet);
+//                            homeBinding.loading.setVisibility(View.GONE);
+//                            homeBinding.noInternet.setVisibility(View.VISIBLE);
+//                            homeBinding.photoList.setVisibility(View.VISIBLE);
+//                        }
+//                        viewModel.noInternet = new MutableLiveData<>();
+//                    }
+//                }
+//        );
+
     }
 }

@@ -7,6 +7,7 @@
     <string name="register_now"><u><b>Register now!</b></u></string>
     <string name="category_name"><u>Category name</u></string>
     <string name="sign_in_back"><u><b>Sign in</b></u></string>
+    <string name="no_internet_connection">No internet connection</string>
 
     <string name="email">Email</string>
     <string name="password">Password</string>
@@ -16,6 +17,13 @@
     <string name="sign_up">Sign up</string>
     <string name="login">Login</string>
     <string name="email_mobile_no">Mobile no or email</string>
+
+    <string name="name_is_required">Name is required!</string>
+    <string name="email_is_required">Email/Mobile no is required!</string>
+    <string name="password_is_required">Password is required!</string>
+    <string name="password_length">Min password length should be 6!</string>
+
+
     <string name="who_are_you">Who you are</string>
     <string name="user">User</string>
     <string name="todo">TODO</string>

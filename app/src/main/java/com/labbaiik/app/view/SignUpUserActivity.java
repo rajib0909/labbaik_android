@@ -25,7 +25,7 @@ import java.io.File;
 public class SignUpUserActivity extends AppCompatActivity {
 
     ActivitySignUpUserBinding signUpUserBinding;
-    private File file;
+    private String  name, email,password, confirmPassword, gender;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -38,7 +38,7 @@ public class SignUpUserActivity extends AppCompatActivity {
 //        window.setAttributes(winParams);
 //        window.getDecorView().setSystemUiVisibility(View.SYSTEM_UI_FLAG_LAYOUT_STABLE | View.SYSTEM_UI_FLAG_LAYOUT_FULLSCREEN);
 
-        file = new File("");
+        //file = new File("");
         String[] genderArray = {"Male", "Female", "Other"};
         ArrayAdapter<String> genderAdapter = new ArrayAdapter<>
                 (this, android.R.layout.select_dialog_item, genderArray);
@@ -51,9 +51,39 @@ public class SignUpUserActivity extends AppCompatActivity {
                 }
         );
 
-        signUpUserBinding.btnSignUp.setOnClickListener(l -> startActivity(new Intent(SignUpUserActivity.this, UserImageSetActivity.class))
-        );
+        signUpUserBinding.btnSignUp.setOnClickListener(l -> {
 
+            name = signUpUserBinding.etName.getText().toString().trim();
+            email  = signUpUserBinding.etEmail.getText().toString().trim();
+            password = signUpUserBinding.etPassword.getText().toString().trim();
+            password = signUpUserBinding.etConfirmPassword.getText().toString().trim();
+            gender = signUpUserBinding.spinnerGender.getText().toString();
+
+
+            if (name.isEmpty()) {
+                Toast.makeText(this, getString(R.string.name_is_required), Toast.LENGTH_SHORT).show();
+                signUpUserBinding.etName.requestFocus();
+                return;
+            }
+            if (email.isEmpty()) {
+                Toast.makeText(this, getString(R.string.email_is_required), Toast.LENGTH_SHORT).show();
+                signUpUserBinding.etEmail.requestFocus();
+                return;
+            }
+            if (password.isEmpty()) {
+                Toast.makeText(this, getString(R.string.password_is_required), Toast.LENGTH_SHORT).show();
+                signUpUserBinding.etEmail.requestFocus();
+                return;
+            }
+            if (confirmPassword.isEmpty()) {
+                Toast.makeText(this, getString(R.string.password_is_required), Toast.LENGTH_SHORT).show();
+                signUpUserBinding.etName.requestFocus();
+                return;
+            }
+
+                    //startActivity(new Intent(SignUpUserActivity.this, UserImageSetActivity.class));
+                }
+        );
 
 
 //        signUpUserBinding.btnChangeImage.setOnClickListener(l -> {

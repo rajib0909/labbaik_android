@@ -79,6 +79,7 @@
         </RelativeLayout>
 
         <TextView
+            android:id="@+id/tvQuestion"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="38dp"
@@ -136,73 +137,83 @@
         </LinearLayout>
 
         <LinearLayout
+            android:id="@+id/ansView"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginStart="38dp"
-            android:layout_marginTop="6dp"
-            android:orientation="horizontal">
-
-            <de.hdodenhof.circleimageview.CircleImageView
-                android:id="@+id/profile_image_mufti"
-                android:layout_width="30dp"
-                android:layout_height="30dp"
-                android:src="@drawable/account"
-                app:civ_border_color="@color/mtrl_textinput_default_box_stroke_color"
-                app:civ_border_width="2dp" />
+            android:orientation="vertical">
 
             <LinearLayout
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_gravity="center_vertical"
-                android:layout_marginStart="8dp"
-                android:orientation="vertical">
+                android:layout_marginStart="38dp"
+                android:layout_marginTop="6dp"
+                android:orientation="horizontal">
 
-                <TextView
-                    android:id="@+id/tvMuftiName"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Mufti Ahsan Ullah"
-                    android:textColor="@color/textColor_mufti_name"
-                    android:textSize="12sp"
-                    android:textStyle="bold" />
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/profile_image_mufti"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:src="@drawable/account"
+                    app:civ_border_color="@color/mtrl_textinput_default_box_stroke_color"
+                    app:civ_border_width="2dp" />
 
                 <LinearLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:orientation="horizontal">
-
-                    <RatingBar
-                        android:id="@+id/rating"
-                        style="?android:attr/ratingBarStyleSmall"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:isIndicator="true"
-                        android:numStars="5"
-                        android:rating="4.5"
-                        android:stepSize="0.1" />
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginStart="8dp"
+                    android:orientation="vertical">
 
                     <TextView
-                        android:id="@+id/ratingCount"
+                        android:id="@+id/tvMuftiName"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_gravity="center_vertical"
-                        android:layout_marginStart="4dp"
-                        android:text="4.9 (Total ans. 235)"
-                        android:textColor="@color/textColor_primary"
-                        android:textSize="10sp" />
+                        android:text="Mufti Ahsan Ullah"
+                        android:textColor="@color/textColor_mufti_name"
+                        android:textSize="12sp"
+                        android:textStyle="bold" />
 
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <RatingBar
+                            android:id="@+id/rating"
+                            style="?android:attr/ratingBarStyleSmall"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:isIndicator="true"
+                            android:numStars="5"
+                            android:rating="4.5"
+                            android:stepSize="0.1" />
+
+                        <TextView
+                            android:id="@+id/ratingCount"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginStart="4dp"
+                            android:text="4.9 (Total ans. 235)"
+                            android:textColor="@color/textColor_primary"
+                            android:textSize="10sp" />
+
+                    </LinearLayout>
                 </LinearLayout>
             </LinearLayout>
+
+            <TextView
+                android:id="@+id/tvAns"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="38dp"
+                android:layout_marginTop="6dp"
+                android:text="ইশরাক নামায পড়ার ক্ষেত্রে এমন কোনো নিয়ম নেই। গুরুত্বপূর্ণ নফল নামাজগুলোর অন্যতম হলো ইশরাকের নামাজ। ইশরাক অর্থ হলো ‘উদয় হওয়া’ বা ‘আলোকিত হওয়া’। শরিয়তের পরিভাষায় সূর্যোদয়ের পর সূর্যের See more..."
+                android:textColor="@color/textColor_primary"
+                android:textSize="14sp" />
+
         </LinearLayout>
 
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="38dp"
-            android:layout_marginTop="6dp"
-            android:text="ইশরাক নামায পড়ার ক্ষেত্রে এমন কোনো নিয়ম নেই। গুরুত্বপূর্ণ নফল নামাজগুলোর অন্যতম হলো ইশরাকের নামাজ। ইশরাক অর্থ হলো ‘উদয় হওয়া’ বা ‘আলোকিত হওয়া’। শরিয়তের পরিভাষায় সূর্যোদয়ের পর সূর্যের See more..."
-            android:textColor="@color/textColor_primary"
-            android:textSize="14sp" />
 
         <View
             android:layout_width="match_parent"

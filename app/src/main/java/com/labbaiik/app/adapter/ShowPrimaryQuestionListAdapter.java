@@ -12,14 +12,14 @@ import androidx.databinding.DataBindingUtil;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.labbaiik.app.R;
-import com.labbaiik.app.databinding.DuaListBinding;
 import com.labbaiik.app.databinding.HomeQuestiondListBinding;
+import com.labbaiik.app.model.fetchAllQueston.Question;
 
 import java.util.List;
 
 
 public class ShowPrimaryQuestionListAdapter extends RecyclerView.Adapter<ShowPrimaryQuestionListAdapter.ViewHolder> {
-    private List<String> allResultList;
+    private List<Question> allResultList;
     private Context context;
     private OnClickQuestionList onClickQuestionList;
 
@@ -27,7 +27,7 @@ public class ShowPrimaryQuestionListAdapter extends RecyclerView.Adapter<ShowPri
         this.onClickQuestionList = onClickQuestionList;
     }
 
-    public ShowPrimaryQuestionListAdapter(List<String> allResultList, Context context) {
+    public ShowPrimaryQuestionListAdapter(List<Question> allResultList, Context context) {
         this.allResultList = allResultList;
         this.context = context;
     }
@@ -41,7 +41,7 @@ public class ShowPrimaryQuestionListAdapter extends RecyclerView.Adapter<ShowPri
         void onClickReportToMufti(String data);
     }
 
-    public void updateDuaList(List<String> allResultList) {
+    public void updateDuaList(List<Question> allResultList) {
         this.allResultList.addAll(allResultList);
     }
 
@@ -56,7 +56,7 @@ public class ShowPrimaryQuestionListAdapter extends RecyclerView.Adapter<ShowPri
 
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
-        String datum = allResultList.get(position);
+        Question datum = allResultList.get(position);
         holder.bind(datum);
     }
 
@@ -73,7 +73,16 @@ public class ShowPrimaryQuestionListAdapter extends RecyclerView.Adapter<ShowPri
             this.binding = binding;
         }
 
-        public void bind(String datum) {
+        public void bind(Question datum) {
+            binding.tvQuestion.setText(datum.getQuestion());
+            if (!datum.getAnswers().isEmpty()){
+                binding.ansView.setVisibility(View.VISIBLE);
+                binding.tvMuftiName.setText(datum.getAnswers().get(0).getUserName());
+                binding.tvAns.setText(datum.getAnswers().get(0).getAnswer());
+            }else {
+                binding.ansView.setVisibility(View.GONE);
+            }
+
             binding.optionMenu.setOnClickListener(l->{
                 PopupMenu menu = new PopupMenu(context, binding.optionMenu);
                 menu.inflate(R.menu.question_list_option_menu);

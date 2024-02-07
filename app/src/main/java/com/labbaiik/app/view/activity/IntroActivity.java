@@ -1,5 +1,7 @@
 package com.labbaiik.app.view.activity;
 
+import static com.labbaiik.app.utill.SharedPrefUtil.getBooleanSetting;
+
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.databinding.DataBindingUtil;
@@ -18,6 +20,7 @@ import android.view.animation.TranslateAnimation;
 import com.labbaiik.app.R;
 import com.labbaiik.app.databinding.ActivityIntroBinding;
 import com.labbaiik.app.view.LoginActivity;
+import com.labbaiik.app.view.MainActivity;
 import com.labbaiik.app.view.activity.introFragment.IntroOneFragment;
 import com.labbaiik.app.view.activity.introFragment.IntroThreeFragment;
 import com.labbaiik.app.view.activity.introFragment.IntroTwoFragment;
@@ -30,6 +33,12 @@ public class IntroActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
+        if (getBooleanSetting(this, "isLoggedIn", false)) {
+            Intent intent = new Intent(IntroActivity.this, MainActivity.class);
+            startActivity(intent);
+            finish();
+        }
         binding = DataBindingUtil.setContentView(this, R.layout.activity_intro);
 
         binding.welcomeViewPager.setAdapter(new MyPagerAdapter(getSupportFragmentManager()));

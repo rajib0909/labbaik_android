@@ -7,6 +7,8 @@ import androidx.lifecycle.MutableLiveData;
 import com.labbaiik.app.api.NetworkService;
 import com.labbaiik.app.model.fetchAllQueston.FetchAllQuestion;
 import com.labbaiik.app.model.login.Login;
+import com.labbaiik.app.model.privacyResponse.PrivacyResponse;
+import com.labbaiik.app.model.questionCategory.QuestionCategoryResponse;
 
 import io.reactivex.rxjava3.android.schedulers.AndroidSchedulers;
 import io.reactivex.rxjava3.annotations.NonNull;
@@ -22,7 +24,9 @@ public class ViewModel extends androidx.lifecycle.ViewModel {
      */
 
     public MutableLiveData<FetchAllQuestion> fetchAllQuestionMutableLiveData = new MutableLiveData<>();
+    public MutableLiveData<QuestionCategoryResponse> questionCategory = new MutableLiveData<>();
     public MutableLiveData<Login> loginMutableLiveData = new MutableLiveData<>();
+    public MutableLiveData<PrivacyResponse> privacyResponseMutableLiveData = new MutableLiveData<>();
 
 
 
@@ -31,6 +35,8 @@ public class ViewModel extends androidx.lifecycle.ViewModel {
      */
     public MutableLiveData<Boolean> fetchAllQuestionLoadError = new MutableLiveData<>();
     public MutableLiveData<Boolean> loginLoadError = new MutableLiveData<>();
+    public MutableLiveData<Boolean> questionCategoryLoadError = new MutableLiveData<>();
+    public MutableLiveData<Boolean> privacyResponseLoadError = new MutableLiveData<>();
 
 
     /**
@@ -63,6 +69,50 @@ public class ViewModel extends androidx.lifecycle.ViewModel {
                             @Override
                             public void onError(@NonNull Throwable e) {
                                 fetchAllQuestionLoadError.setValue(true);
+                                loading.setValue(false);
+                            }
+                        })
+        );
+    }
+
+    public void allQuestionCategory() {
+        disposable.add(
+                networkService.allQuestionCategory()
+                        .subscribeOn(Schedulers.newThread())
+                        .observeOn(AndroidSchedulers.mainThread())
+                        .subscribeWith(new DisposableSingleObserver<QuestionCategoryResponse>() {
+                            @Override
+                            public void onSuccess(@NonNull QuestionCategoryResponse questionCategoryResponse) {
+                                questionCategory.setValue(questionCategoryResponse);
+                                questionCategoryLoadError.setValue(false);
+                                loading.setValue(false);
+                            }
+
+                            @Override
+                            public void onError(@NonNull Throwable e) {
+                                questionCategoryLoadError.setValue(true);
+                                loading.setValue(false);
+                            }
+                        })
+        );
+    }
+
+    public void getPrivacy() {
+        disposable.add(
+                networkService.getPrivacy()
+                        .subscribeOn(Schedulers.newThread())
+                        .observeOn(AndroidSchedulers.mainThread())
+                        .subscribeWith(new DisposableSingleObserver<PrivacyResponse>() {
+                            @Override
+                            public void onSuccess(@NonNull PrivacyResponse privacyResponse) {
+                                privacyResponseMutableLiveData.setValue(privacyResponse);
+                                privacyResponseLoadError.setValue(false);
+                                loading.setValue(false);
+                            }
+
+                            @Override
+                            public void onError(@NonNull Throwable e) {
+                                privacyResponseLoadError.setValue(true);
                                 loading.setValue(false);
                             }
                         })

@@ -2,6 +2,8 @@ package com.labbaiik.app.api;
 
 import com.labbaiik.app.model.fetchAllQueston.FetchAllQuestion;
 import com.labbaiik.app.model.login.Login;
+import com.labbaiik.app.model.privacyResponse.PrivacyResponse;
+import com.labbaiik.app.model.questionCategory.QuestionCategoryResponse;
 
 import io.reactivex.rxjava3.core.Single;
 import retrofit2.http.GET;
@@ -14,6 +16,14 @@ public interface Api {
     @Headers({"Accept: application/json"})
     @GET("fetch-question")
     Single<FetchAllQuestion> allQuestion();
+
+    @Headers({"Accept: application/json"})
+    @GET("fetch-cat")
+    Single<QuestionCategoryResponse> allQuestionCategory();
+
+    @Headers({"Accept: application/json"})
+    @GET("policy")
+    Single<PrivacyResponse> getPrivacy();
 
     @Headers({"Accept: application/json"})
     @POST("login-user")

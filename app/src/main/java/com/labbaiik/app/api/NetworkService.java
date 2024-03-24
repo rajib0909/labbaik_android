@@ -2,6 +2,8 @@ package com.labbaiik.app.api;
 
 import com.labbaiik.app.model.fetchAllQueston.FetchAllQuestion;
 import com.labbaiik.app.model.login.Login;
+import com.labbaiik.app.model.privacyResponse.PrivacyResponse;
+import com.labbaiik.app.model.questionCategory.QuestionCategoryResponse;
 
 import hu.akarnokd.rxjava3.retrofit.RxJava3CallAdapterFactory;
 import io.reactivex.rxjava3.core.Single;
@@ -34,6 +36,14 @@ public class NetworkService {
 
     public Single<FetchAllQuestion> allQuestion() {
         return api.allQuestion();
+    }
+
+    public Single<QuestionCategoryResponse> allQuestionCategory() {
+        return api.allQuestionCategory();
+    }
+
+    public Single<PrivacyResponse> getPrivacy() {
+        return api.getPrivacy();
     }
 
     public Single<Login> login(String email, String password) {

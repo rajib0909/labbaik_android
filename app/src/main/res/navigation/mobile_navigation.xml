@@ -144,6 +144,12 @@
         tools:layout="@layout/fragment_change_language" />
 
     <fragment
+        android:id="@+id/navigation_privacy"
+        android:name="com.labbaiik.app.view.fragments.more.PrivacyFragment"
+        android:label=""
+        tools:layout="@layout/fragment_privacy" />
+
+    <fragment
         android:id="@+id/navigation_feedback"
         android:name="com.labbaiik.app.view.fragments.more.FeedbackFragment"
         android:label=""

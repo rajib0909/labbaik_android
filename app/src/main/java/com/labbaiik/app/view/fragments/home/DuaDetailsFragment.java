@@ -5,12 +5,16 @@ import android.os.Bundle;
 import androidx.databinding.DataBindingUtil;
 import androidx.fragment.app.Fragment;
 
+import android.text.Html;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.google.gson.Gson;
 import com.labbaiik.app.R;
 import com.labbaiik.app.databinding.FragmentDuaDetailsBinding;
+import com.labbaiik.app.model.duaList.Dua;
 import com.labbaiik.app.view.MainActivity;
 
 public class DuaDetailsFragment extends Fragment {
@@ -24,8 +28,19 @@ public class DuaDetailsFragment extends Fragment {
         binding = DataBindingUtil.inflate(inflater, R.layout.fragment_dua_details, container, false);
 
         binding.btnBack.setOnClickListener(l -> getActivity().onBackPressed());
+        String duaString = getArguments().getString("dua");
 
-        binding.toolbarTxt.setText("ইমান নবায়নের দু‘আ");
+        Log.d("Tanvir >> dua >> ", duaString);
+
+        // Convert JSON string to object using GSON
+        Gson gson = new Gson();
+        Dua dua = gson.fromJson(duaString , Dua.class);
+
+        binding.toolbarTxt.setText("দু‘আ");
+        binding.duaTitle.setText(dua.getTitle());
+        binding.duaArbi.setText(dua.getArabic());
+        binding.duaBangla.setText(Html.fromHtml(dua.getBanglaMeaning()));
+
 
 
         return binding.getRoot();

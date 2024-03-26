@@ -10,6 +10,17 @@
         android:background="@color/background_color"
         tools:context=".view.fragments.home.DuaFragment">
 
+        <com.airbnb.lottie.LottieAnimationView
+            android:id="@+id/loading"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:layout_centerInParent="true"
+            android:visibility="gone"
+            app:lottie_autoPlay="true"
+            app:lottie_loop="true"
+            app:lottie_rawRes="@raw/loading" />
+
+
         <androidx.appcompat.widget.Toolbar
             android:id="@+id/toolbar"
             android:layout_width="match_parent"
@@ -59,11 +70,18 @@
                     android:textSize="14sp" />
 
                 <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/duaType"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+
+                <androidx.recyclerview.widget.RecyclerView
                     android:id="@+id/duaList"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content" />
 
-                <com.google.android.material.card.MaterialCardView
+
+             <!--   <com.google.android.material.card.MaterialCardView
                     android:id="@+id/btn_dua_details"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -141,7 +159,7 @@
 
                     </RelativeLayout>
 
-                </com.google.android.material.card.MaterialCardView>
+                </com.google.android.material.card.MaterialCardView>-->
 
 
             </LinearLayout>

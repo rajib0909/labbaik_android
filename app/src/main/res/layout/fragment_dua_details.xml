@@ -55,11 +55,11 @@
 
                     <TextView
                         android:id="@+id/duaTitle"
-                        android:layout_width="wrap_content"
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginStart="10dp"
                         android:layout_marginTop="10dp"
-                        android:layout_marginEnd="10dp"
+                        android:layout_marginEnd="70dp"
                         android:layout_marginBottom="10dp"
                         android:text="ঈমান নবায়নের দু‘আ"
                         android:textColor="@color/textColor_primary"

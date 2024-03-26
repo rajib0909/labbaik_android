@@ -1,9 +1,12 @@
 package com.labbaiik.app.api;
 
+import com.labbaiik.app.model.duaList.DuaListResponse;
 import com.labbaiik.app.model.fetchAllQueston.FetchAllQuestion;
 import com.labbaiik.app.model.login.Login;
 import com.labbaiik.app.model.privacyResponse.PrivacyResponse;
 import com.labbaiik.app.model.questionCategory.QuestionCategoryResponse;
+import com.labbaiik.app.model.termsCondition.TermsConditionResponse;
+import com.labbaiik.app.model.videoList.VideoListResponse;
 
 import io.reactivex.rxjava3.core.Single;
 import retrofit2.http.GET;
@@ -24,6 +27,18 @@ public interface Api {
     @Headers({"Accept: application/json"})
     @GET("policy")
     Single<PrivacyResponse> getPrivacy();
+
+    @Headers({"Accept: application/json"})
+    @GET("term")
+    Single<TermsConditionResponse> getTermsCondition();
+
+    @Headers({"Accept: application/json"})
+    @GET("fetch-dua")
+    Single<DuaListResponse> getDuaList();
+
+    @Headers({"Accept: application/json"})
+    @GET("fetch-videos")
+    Single<VideoListResponse> getVideoList();
 
     @Headers({"Accept: application/json"})
     @POST("login-user")

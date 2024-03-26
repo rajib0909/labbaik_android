@@ -45,6 +45,11 @@ public class MoreFragment extends Fragment {
             navController.navigate(R.id.navigation_privacy);
         });
 
+        binding.btnTermsCondition.setOnClickListener(l -> {
+            NavController navController = Navigation.findNavController(getActivity(), R.id.nav_host_fragment);
+            navController.navigate(R.id.navigation_terms_condition);
+        });
+
         binding.btnFeedback.setOnClickListener(l -> {
             NavController navController = Navigation.findNavController(getActivity(), R.id.nav_host_fragment);
             navController.navigate(R.id.navigation_feedback);

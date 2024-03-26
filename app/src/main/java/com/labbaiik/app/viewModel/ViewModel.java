@@ -5,10 +5,13 @@ import android.util.Log;
 import androidx.lifecycle.MutableLiveData;
 
 import com.labbaiik.app.api.NetworkService;
+import com.labbaiik.app.model.duaList.DuaListResponse;
 import com.labbaiik.app.model.fetchAllQueston.FetchAllQuestion;
 import com.labbaiik.app.model.login.Login;
 import com.labbaiik.app.model.privacyResponse.PrivacyResponse;
 import com.labbaiik.app.model.questionCategory.QuestionCategoryResponse;
+import com.labbaiik.app.model.termsCondition.TermsConditionResponse;
+import com.labbaiik.app.model.videoList.VideoListResponse;
 
 import io.reactivex.rxjava3.android.schedulers.AndroidSchedulers;
 import io.reactivex.rxjava3.annotations.NonNull;
@@ -27,6 +30,9 @@ public class ViewModel extends androidx.lifecycle.ViewModel {
     public MutableLiveData<QuestionCategoryResponse> questionCategory = new MutableLiveData<>();
     public MutableLiveData<Login> loginMutableLiveData = new MutableLiveData<>();
     public MutableLiveData<PrivacyResponse> privacyResponseMutableLiveData = new MutableLiveData<>();
+    public MutableLiveData<TermsConditionResponse> termsConditionResponseData = new MutableLiveData<>();
+    public MutableLiveData<DuaListResponse> duaListResponseMutableLiveData = new MutableLiveData<>();
+    public MutableLiveData<VideoListResponse> videoListResponseMutableLiveData = new MutableLiveData<>();
 
 
 
@@ -37,6 +43,9 @@ public class ViewModel extends androidx.lifecycle.ViewModel {
     public MutableLiveData<Boolean> loginLoadError = new MutableLiveData<>();
     public MutableLiveData<Boolean> questionCategoryLoadError = new MutableLiveData<>();
     public MutableLiveData<Boolean> privacyResponseLoadError = new MutableLiveData<>();
+    public MutableLiveData<Boolean> termsConditionResponseLoadError = new MutableLiveData<>();
+    public MutableLiveData<Boolean> duaListResponseLoadError = new MutableLiveData<>();
+    public MutableLiveData<Boolean> videoListResponseLoadError = new MutableLiveData<>();
 
 
     /**
@@ -91,6 +100,73 @@ public class ViewModel extends androidx.lifecycle.ViewModel {
                             @Override
                             public void onError(@NonNull Throwable e) {
                                 questionCategoryLoadError.setValue(true);
+                                loading.setValue(false);
+                            }
+                        })
+        );
+    }
+
+    public void getTermsCondition() {
+        disposable.add(
+                networkService.getTermsCondition()
+                        .subscribeOn(Schedulers.newThread())
+                        .observeOn(AndroidSchedulers.mainThread())
+                        .subscribeWith(new DisposableSingleObserver<TermsConditionResponse>() {
+                            @Override
+                            public void onSuccess(@NonNull TermsConditionResponse response) {
+                                termsConditionResponseData.setValue(response);
+                                termsConditionResponseLoadError.setValue(false);
+                                loading.setValue(false);
+                            }
+
+                            @Override
+                            public void onError(@NonNull Throwable e) {
+                                termsConditionResponseLoadError.setValue(true);
+                                loading.setValue(false);
+                            }
+                        })
+        );
+    }
+
+    public void getDuaList() {
+        disposable.add(
+                networkService.getDuaList()
+                        .subscribeOn(Schedulers.newThread())
+                        .observeOn(AndroidSchedulers.mainThread())
+                        .subscribeWith(new DisposableSingleObserver<DuaListResponse>() {
+                            @Override
+                            public void onSuccess(@NonNull DuaListResponse response) {
+                                duaListResponseMutableLiveData.setValue(response);
+                                duaListResponseLoadError.setValue(false);
+                                loading.setValue(false);
+                            }
+
+                            @Override
+                            public void onError(@NonNull Throwable e) {
+                                duaListResponseLoadError.setValue(true);
+                                loading.setValue(false);
+                            }
+                        })
+        );
+    }
+
+
+    public void getVideoList() {
+        disposable.add(
+                networkService.getVideoList()
+                        .subscribeOn(Schedulers.newThread())
+                        .observeOn(AndroidSchedulers.mainThread())
+                        .subscribeWith(new DisposableSingleObserver<VideoListResponse>() {
+                            @Override
+                            public void onSuccess(@NonNull VideoListResponse response) {
+                                videoListResponseMutableLiveData.setValue(response);
+                                videoListResponseLoadError.setValue(false);
+                                loading.setValue(false);
+                            }
+
+                            @Override
+                            public void onError(@NonNull Throwable e) {
+                                videoListResponseLoadError.setValue(true);
                                 loading.setValue(false);
                             }
                         })

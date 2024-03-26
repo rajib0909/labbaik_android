@@ -1,9 +1,12 @@
 package com.labbaiik.app.api;
 
+import com.labbaiik.app.model.duaList.DuaListResponse;
 import com.labbaiik.app.model.fetchAllQueston.FetchAllQuestion;
 import com.labbaiik.app.model.login.Login;
 import com.labbaiik.app.model.privacyResponse.PrivacyResponse;
 import com.labbaiik.app.model.questionCategory.QuestionCategoryResponse;
+import com.labbaiik.app.model.termsCondition.TermsConditionResponse;
+import com.labbaiik.app.model.videoList.VideoListResponse;
 
 import hu.akarnokd.rxjava3.retrofit.RxJava3CallAdapterFactory;
 import io.reactivex.rxjava3.core.Single;
@@ -44,6 +47,17 @@ public class NetworkService {
 
     public Single<PrivacyResponse> getPrivacy() {
         return api.getPrivacy();
+    }
+
+    public Single<TermsConditionResponse> getTermsCondition() {
+        return api.getTermsCondition();
+    }
+
+    public Single<DuaListResponse> getDuaList() {
+        return api.getDuaList();
+    }
+    public Single<VideoListResponse> getVideoList() {
+        return api.getVideoList();
     }
 
     public Single<Login> login(String email, String password) {

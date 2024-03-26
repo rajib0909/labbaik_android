@@ -1,6 +1,5 @@
 package com.labbaiik.app.view.fragments.question;
 
-import android.content.Intent;
 import android.content.res.ColorStateList;
 import android.os.Bundle;
 
@@ -16,22 +15,14 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.RadioGroup;
 import android.widget.Toast;
 
-import com.bumptech.glide.Glide;
 import com.labbaiik.app.R;
-import com.labbaiik.app.adapter.ShowDuaListAdapter;
 import com.labbaiik.app.adapter.ShowPrimaryQuestionListAdapter;
 import com.labbaiik.app.databinding.FragmentQuestionsBinding;
-import com.labbaiik.app.view.LoginActivity;
-import com.labbaiik.app.view.MainActivity;
-import com.labbaiik.app.view.SplashActivity;
 import com.labbaiik.app.viewModel.ViewModel;
 
 import java.util.ArrayList;
-import java.util.Collections;
-import java.util.List;
 
 
 public class QuestionsFragment extends Fragment {

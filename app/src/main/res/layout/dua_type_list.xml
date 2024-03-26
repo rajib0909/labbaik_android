@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@color/background_color"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_margin="10dp"
+            android:id="@+id/duaTitle"
+            android:background="@drawable/dua_list_background"
+            android:layout_width="wrap_content"
+            android:paddingTop="4dp"
+            android:paddingBottom="4dp"
+            android:paddingStart="8dp"
+            android:paddingEnd="8dp"
+            android:layout_height="wrap_content"
+            android:textColor="@color/textColor_primary"
+            android:textSize="12sp" />
+
+    </LinearLayout>
+
+</layout>
+

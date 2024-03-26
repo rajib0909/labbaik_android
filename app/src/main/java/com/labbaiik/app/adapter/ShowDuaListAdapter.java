@@ -11,20 +11,21 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.labbaiik.app.R;
 import com.labbaiik.app.databinding.DuaListBinding;
+import com.labbaiik.app.model.duaList.Dua;
 
 import java.util.List;
 
 
 public class ShowDuaListAdapter extends RecyclerView.Adapter<ShowDuaListAdapter.ViewHolder> {
-    private List<String> allResultList;
+    private List<Dua> allResultList;
     private Context context;
-    private OnClickDuaList onClickLesson;
+    private OnClickDuaList onClickDuaList;
 
-    public void setOnClickLesson(OnClickDuaList onClickLesson) {
-        this.onClickLesson = onClickLesson;
+    public void setOnClickDuaList(OnClickDuaList onClickDuaList) {
+        this.onClickDuaList = onClickDuaList;
     }
 
-    public ShowDuaListAdapter(List<String> allResultList, Context context) {
+    public ShowDuaListAdapter(List<Dua> allResultList, Context context) {
         this.allResultList = allResultList;
         this.context = context;
     }
@@ -34,10 +35,10 @@ public class ShowDuaListAdapter extends RecyclerView.Adapter<ShowDuaListAdapter.
     }
 
     public interface OnClickDuaList {
-        void onClickLesson(String data);
+        void onClickDua(Dua dua);
     }
 
-    public void updateDuaList(List<String> allResultList) {
+    public void updateDuaList(List<Dua> allResultList) {
         this.allResultList.addAll(allResultList);
     }
 
@@ -52,7 +53,7 @@ public class ShowDuaListAdapter extends RecyclerView.Adapter<ShowDuaListAdapter.
 
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
-        String datum = allResultList.get(position);
+        Dua datum = allResultList.get(position);
         holder.bind(datum);
     }
 
@@ -69,12 +70,12 @@ public class ShowDuaListAdapter extends RecyclerView.Adapter<ShowDuaListAdapter.
             this.binding = binding;
         }
 
-        public void bind(String datum) {
-            binding.duaTitle.setText(datum);
+        public void bind(Dua datum) {
+            binding.duaTitle.setText(datum.getTitle());
 
-//            lessonItemBinding.pushUps.setOnClickListener(l->{
-//                onClickLesson.onClickLesson(datum);
-//            });
+            binding.btnDuaDetails.setOnClickListener(l->{
+                onClickDuaList.onClickDua(datum);
+            });
             binding.executePendingBindings();
 
         }

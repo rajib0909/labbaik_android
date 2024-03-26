@@ -150,6 +150,12 @@
         tools:layout="@layout/fragment_privacy" />
 
     <fragment
+        android:id="@+id/navigation_terms_condition"
+        android:name="com.labbaiik.app.view.fragments.more.TermsConditionFragment"
+        android:label=""
+        tools:layout="@layout/fragment_terms_condition" />
+
+    <fragment
         android:id="@+id/navigation_feedback"
         android:name="com.labbaiik.app.view.fragments.more.FeedbackFragment"
         android:label=""

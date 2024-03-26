@@ -15,7 +15,13 @@
             android:background="@drawable/video_list_background"
             android:padding="2dp">
 
-            <ImageView
+            <com.pierfrancescosoffritti.androidyoutubeplayer.core.player.views.YouTubePlayerView
+                android:id="@+id/youtube_player_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+
+        <!--    <ImageView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:scaleType="fitXY"
@@ -26,7 +32,7 @@
                 android:layout_height="wrap_content"
                 android:layout_centerInParent="true"
                 android:scaleType="fitXY"
-                android:src="@drawable/youtube" />
+                android:src="@drawable/youtube" />-->
         </RelativeLayout>
 
 
